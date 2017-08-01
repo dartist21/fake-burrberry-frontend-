@@ -243,3 +243,44 @@
   color: #171717;
   margin-bottom: 1rem;
 }
+
+/* .footer */
+
+.footer {
+  padding: 2rem 1rem;
+  background-color: #f3f3f3;
+}
+
+.footer__btn {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #f3f3f3;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
+  margin-bottom: 1rem;
+}
+
+.footer__title {
+  display: block;
+  text-align: center;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #171717;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.footer__contact {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: #171717;
+}
