@@ -130,3 +130,38 @@
   font-weight: 400;
   color: #171717;
 }
+
+
+/* .read-more */
+
+.read-more {
+  padding: 0 1rem;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.wp-read-more {
+  display: flex;
+  justify-content: space-between;
+}
+
+.read-more__title {
+  margin: 2rem 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #171717;
+}
+
+.read-more__par {
+  margin: 0;
+  font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #171717;
+  margin-bottom: 2rem;
+}
+
+.read-more__icon--rotated {
+  transform: rotate(180deg);
+}
