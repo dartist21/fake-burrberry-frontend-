@@ -25,6 +25,8 @@ nbproject
 *.sublime-workspace
 .idea
 
+.csscomb.json
+
 # Folders to ignore
 public
 node_modules
