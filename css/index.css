@@ -254,7 +254,7 @@
 }
 
 
-.recommend-list__item > h3
+.recommend-list__product
 {
     font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 1.125rem;
@@ -266,7 +266,7 @@
     color: #111;
 }
 
-.recommend-list__item > h5
+.recommend-list__price
 {
     font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: .75rem;
