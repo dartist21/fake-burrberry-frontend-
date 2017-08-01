@@ -165,3 +165,52 @@
 .read-more__icon--rotated {
   transform: rotate(180deg);
 }
+
+/* .we-recommend */
+
+.we-recommend {
+  padding: 1rem 1rem;
+}
+
+.we-recommend__title {
+  display: inline-block;
+  margin: 2rem 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #171717;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #171717;
+}
+
+.recommend-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recommend-list__item {
+  text-decoration: none;
+  flex-basis: 130px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+
+.recommend-list__item > h3 {
+  font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #111111;
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.recommend-list__item > h5 {
+  margin: 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
+}
