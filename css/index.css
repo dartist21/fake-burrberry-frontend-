@@ -214,3 +214,32 @@
   font-weight: 400;
   color: #999999;
 }
+
+/* .additional-offers */
+
+.additional-offers {
+  padding: 0 1rem 3rem 1rem;
+}
+
+.additional-offers__title {
+  display: inline-block;
+  margin: 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #171717;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #171717;
+  margin-bottom: 1.5rem;
+}
+
+.additional-offers__link {
+  display: block;
+  text-decoration: none;
+  font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: #171717;
+  margin-bottom: 1rem;
+}
