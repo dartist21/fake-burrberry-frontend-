@@ -2,8 +2,6 @@
 .header
 {
     padding: 1rem 0;
-
-    border-bottom: 1px solid #c6c6c6;
 }
 
 .logo
@@ -11,6 +9,14 @@
     display: block;
 
     margin: auto;
+}
+
+.hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #c6c6c6;
+  height: 1px;
+  border-bottom: 1px solid #ffffff;
 }
 
 /* .product */
