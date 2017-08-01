@@ -19,7 +19,7 @@
 .product__title {
   margin: 1.5rem 1rem;
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: #111111;
 }
@@ -37,7 +37,7 @@
 
 .product__price {
 	font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 1.125rem;
   font-weight: 400;
 	color: #111111;
   margin: 0;
@@ -45,7 +45,7 @@
 
 .product__number {
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #171717;
   margin: 0;
@@ -54,7 +54,7 @@
 .product__color-msg {
   margin: 1rem 0;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #171717;
 }
@@ -101,7 +101,7 @@
   border: 0;
   padding: 1rem 0;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   width: 100%;
   max-width: 18rem;
@@ -126,7 +126,7 @@
   border: 0;
   background-color: #ffffff;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #171717;
 }
@@ -147,7 +147,7 @@
 .read-more__title {
   margin: 2rem 0;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #171717;
 }
@@ -155,7 +155,7 @@
 .read-more__par {
   margin: 0;
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5rem;
   color: #171717;
@@ -176,7 +176,7 @@
   display: inline-block;
   margin: 2rem 0;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #171717;
   padding-bottom: 0.5rem;
@@ -200,7 +200,7 @@
 
 .recommend-list__item > h3 {
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.5rem;
   color: #111111;
@@ -210,7 +210,7 @@
 .recommend-list__item > h5 {
   margin: 0;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #999999;
 }
@@ -225,7 +225,7 @@
   display: inline-block;
   margin: 0;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #171717;
   padding-bottom: 0.5rem;
@@ -237,7 +237,7 @@
   display: block;
   text-decoration: none;
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   font-style: italic;
   color: #171717;
@@ -258,7 +258,7 @@
   border: 0;
   background-color: #f3f3f3;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #999999;
   margin-bottom: 1rem;
@@ -268,7 +268,7 @@
   display: block;
   text-align: center;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   color: #171717;
   margin: 1.5rem 0 1rem 0;
@@ -279,7 +279,7 @@
   text-align: center;
   text-decoration: none;
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   font-style: italic;
   color: #171717;
