@@ -38,8 +38,6 @@
 
 .product__info {
   margin: 1.5rem 1rem 2rem 1rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #c6c6c6;
 }
 
 .product__price {
@@ -69,6 +67,7 @@
 
 .product__color-picker {
   display: flex;
+  padding-bottom: 2rem;
 }
 
 .color-picker {
