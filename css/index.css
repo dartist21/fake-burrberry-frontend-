@@ -112,7 +112,7 @@
   border: 0;
   border: solid 1px #171717;
   border-radius: 2px;
-  line-height: 0.75rem;
+  line-height: 1;
 }
 
 .btn--bg-black {
@@ -132,6 +132,7 @@
   margin: 0.5rem 0;
   padding: 0;
   color: #171717;
+  line-height: 1.17;
   border: 0;
   background-color: #ffffff;
 }
