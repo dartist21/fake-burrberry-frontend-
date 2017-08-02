@@ -266,6 +266,7 @@
 .footer__btn {
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
+  line-height: 1.17;
   font-weight: 400;
   display: block;
   margin: 0;
@@ -278,7 +279,8 @@
 
 .footer__title {
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  line-height: 1.19;
   font-weight: bold;
   display: block;
   margin: 1.5rem 0 1rem 0;
@@ -289,6 +291,7 @@
 .footer__contact {
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
+  line-height: 1.215;
   font-weight: 400;
   font-style: italic;
   display: block;
