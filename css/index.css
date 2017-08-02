@@ -1,19 +1,12 @@
 /* .header */
 .header {
   padding: 1rem 0;
+  border-bottom: 1px solid #c6c6c6;
 }
 
 .logo {
   display: block;
   margin: auto;
-}
-
-.hr {
-  height: 1px;
-  margin: 0;
-  border: none;
-  border-top: 1px solid #c6c6c6;
-  border-bottom: 1px solid #ffffff;
 }
 
 /* .product */
@@ -25,9 +18,10 @@
 
 .product__title {
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  margin: 1.5rem 1rem;
+  margin: 1rem 1rem;
+  line-height: 1.2;
   color: #111111;
 }
 
@@ -115,6 +109,7 @@
   border: 0;
   border: solid 1px #171717;
   border-radius: 2px;
+  line-height: 0.75rem;
 }
 
 .btn--bg-black {
