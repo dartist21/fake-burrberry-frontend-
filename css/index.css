@@ -216,11 +216,11 @@
 
 /* .we-recommend */
 
-.we-recommend {
+.recommendations {
   padding: 1rem 1rem;
 }
 
-.we-recommend__title {
+.recommendations__title {
   display: inline-block;
 
   margin: 2rem 0 1.5rem 0;
@@ -235,14 +235,14 @@
   line-height: 1.19;
 }
 
-.we-recommend__cards {
+.recommendations__cards {
   display: flex;
 
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.we-recommend__card {
+.recommendation-card {
   display: flex;
   flex-direction: column;
 
@@ -253,8 +253,13 @@
   flex-basis: 130px;
 }
 
+.recommendation-card__img {
+  width: 130px;
+  height: 174px;
+}
 
-.recommend-list__product-title {
+
+.recommendation-card__title {
   margin: 0.5rem 0;
 
   color: #111111;
@@ -265,7 +270,7 @@
   line-height: 1.19;
 }
 
-.recommend-list__price {
+.recommendation-card__price {
   margin: 0;
   padding-left: 1px;
 
