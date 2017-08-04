@@ -36,7 +36,6 @@
 }
 
 .gallery-img {
-  width: 300px;
   height: 400px;
 }
 
@@ -87,15 +86,16 @@
 
 .color-picker-btn {
   box-sizing: border-box;
-  width: 40px;
   height: 40px;
+  width: 40px;
   margin: 0;
   margin-right: 1rem;
   padding: 0;
-  font-size: 0;
 
   border: 0;
   border-radius: 50%;
+
+  font-size: 0;
 }
 
 .color-picker-btn--black {
@@ -172,26 +172,31 @@
 }
 
 .read-more-accordion__button {
-  padding: 0;
-  border: 0;
-  margin: 0;
-  background-color: #fff;
   width: 100%;
+  margin: 0;
+  padding: 0;
+
   text-align: left;
+
+  border: 0;
+  background-color: #fff;
 }
 
 .read-more-accordion__title::after {
   position: absolute;
-  content: "";
-  background-image: url(../img/triangle.svg);
-  width: 10px;
-  height: 10px;
-  right: 0;
   top: 25%;
+  right: 0;
+
+  height: 10px;
+
+  content: "";
+
+  background-image: url(../img/triangle.svg);
 }
 
 .read-more-accordion__title {
   position: relative;
+
   margin: 2rem 0;
 
   color: #171717;
@@ -220,6 +225,7 @@
 
 .read-more-accordion  li {
   list-style-type: none;
+
   color: #171717;
 
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -273,7 +279,6 @@
 }
 
 .recommendation-card__img {
-  width: 130px;
   height: 174px;
 }
 
