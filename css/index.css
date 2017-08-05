@@ -220,7 +220,7 @@
   line-height: 1.715;
 }
 
-.read-more-accordion > ul {
+.read-more-accordion  ul {
   margin: 1.5rem 0 2rem 0;
   padding: 0;
 }
@@ -533,7 +533,7 @@
     display: none;
   }
 
-  .read-more-accordion > ul {
+  .read-more-accordion  ul {
     margin-bottom: 1.5rem;
   }
 
