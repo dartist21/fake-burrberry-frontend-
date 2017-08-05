@@ -401,6 +401,30 @@
   line-height: 1.33;
 }
 
+.footer-nav {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.footer-nav__title {
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #171717;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.footer-nav__link {
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #999999;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
 /* delivery */
 
 .delivery {
@@ -521,5 +545,19 @@
 
   .footer {
     width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .footer-nav {
+    display: block;
+  }
+
+  .footer__title, .footer__link {
+    display: none;
+  }
+
+  .footer__button {
+    display: inline-block;
+    margin-right: 1.5rem;
   }
 }
