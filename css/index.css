@@ -349,7 +349,7 @@
 /* .footer */
 
 .footer {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 
   background-color: #f3f3f3;
 }
@@ -443,7 +443,6 @@
 
 .delivery__image {
   height: 324px;
-  margin-left: 8px;
 }
 
 .delivery__title {
@@ -562,11 +561,11 @@
   }
 
   .delivery {
-    display: block;
+    display: flex;
   }
 
   .footer {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0rem;
   }
 
   .footer-nav {
