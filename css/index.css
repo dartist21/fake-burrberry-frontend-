@@ -443,6 +443,7 @@
 
 .delivery__image {
   width: 100%;
+  display: block;
 }
 
 .delivery__title {
@@ -538,7 +539,7 @@
   }
 
   .recommendations__title {
-    margin: 1.25rem 0 1rem 0;
+    margin: 1.5rem 0 1rem 0;
   }
 
   .recommendation-card__price {
