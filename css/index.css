@@ -468,7 +468,7 @@
 }
 
 .delivery__par {
-  margin: 0 0.5rem 1.5rem 0;
+  margin: 0 0 1.5rem 0;
 
   color: #171717;
 
@@ -515,7 +515,7 @@
   }
 
   .read-more-accordion {
-    padding: 0 1rem 0 0.5rem;
+    padding: 0 1rem 0 0;
 
     border-bottom: 0;
   }
@@ -537,7 +537,7 @@
   }
 
   .recommendations {
-    padding: 0 0.5rem;
+    padding: 0;
   }
 
   .recommendations__title {
@@ -545,7 +545,8 @@
   }
 
   .recommendation-card__img {
-    height: 235px;
+    height: 100%;
+    width: 100%;
   }
 
   .recommendation-card__price {
