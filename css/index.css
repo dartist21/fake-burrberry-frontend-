@@ -281,7 +281,7 @@
 }
 
 .recommendation-card__img {
-  height: 174px;
+  width: 100%;
 }
 
 
@@ -442,7 +442,7 @@
 }
 
 .delivery__image {
-  height: 324px;
+  width: 100%;
 }
 
 .delivery__title {
@@ -492,7 +492,6 @@
 
 
   .gallery-img {
-    width: 432px;
     height: 576px;
 
     flex: none;
@@ -500,12 +499,10 @@
 
   .product__info {
     margin: 0 0 2rem 0;
-    margin-left: -1px;
   }
 
   .product__properties-btns {
     margin: 0;
-    margin-left: -1px;
   }
 
   .product {
@@ -544,11 +541,6 @@
     margin: 1.25rem 0 1rem 0;
   }
 
-  .recommendation-card__img {
-    height: 100%;
-    width: 100%;
-  }
-
   .recommendation-card__price {
     padding-left: 0;
   }
@@ -562,7 +554,7 @@
   }
 
   .delivery {
-    display: flex;
+    display: block;
   }
 
   .footer {
