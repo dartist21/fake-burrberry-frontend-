@@ -353,9 +353,14 @@
 
   background-color: #f3f3f3;
 }
+.footer__buttons {
+  display: flex;
+  flex-direction: column;
+}
 
 .footer__button {
-  display: block;
+  display: inline-block;
+  text-align: left;
 
   margin: 0;
   margin-bottom: 1rem;
@@ -570,9 +575,11 @@
     display: none;
   }
 
-  .footer__button {
-    display: inline-block;
+  .footer__buttons {
+    flex-direction: row;
+  }
 
+  .footer__button {
     margin-right: 1.5rem;
   }
 
