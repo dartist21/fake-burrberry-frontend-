@@ -485,15 +485,12 @@
   }
 
   .product__title {
-    margin: 1.5rem 0.5rem;
+    margin: 1.5rem 0;
 
     font-size: 1.5rem;
     line-height: 1.17;
   }
 
-  .product__gallery {
-    margin-left: 0.5rem;
-  }
 
   .gallery-img {
     width: 432px;
@@ -503,12 +500,12 @@
   }
 
   .product__info {
-    margin: 0 0.5rem 2rem 0;
+    margin: 0 0 2rem 0;
     margin-left: -1px;
   }
 
   .product__properties-btns {
-    margin: 0 0.5rem 0 0;
+    margin: 0;
     margin-left: -1px;
   }
 
