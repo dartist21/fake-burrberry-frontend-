@@ -20,7 +20,7 @@
 }
 
 .product__title {
-  margin: 1rem 1rem;
+  margin: 1rem 0.5rem;
 
   color: #111111;
 
@@ -311,7 +311,7 @@
 /* .additional-offers */
 
 .additional-offers {
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 0.5rem 3rem 0.5rem;
 }
 
 .additional-offers__title {
@@ -356,6 +356,7 @@
 .footer__buttons {
   display: flex;
   flex-direction: column;
+  margin: 0 0.5rem;
 }
 
 .footer__button {
@@ -379,7 +380,7 @@
 .footer__title {
   display: block;
 
-  margin: 1.5rem 0 1rem 0;
+  margin: .5rem 0 1rem 0;
 
   text-align: center;
 
@@ -577,6 +578,7 @@
 
   .footer__buttons {
     flex-direction: row;
+    margin: 0;
   }
 
   .footer__button {
