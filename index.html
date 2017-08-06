@@ -7,7 +7,8 @@
     <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:400,700">
+    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:400,600,700">
     <link rel="stylesheet" href="css/index.css">
   </head>
 
@@ -18,38 +19,54 @@
         <img src="img/logo.svg" class="logo" alt="logo">
       </a>
     </header>
-
-    <section class="product">
-      <h1 class="product__title">Long Cotton Gabardine Car Coat</h1>
-      <div class="product__gallery">
-        <img src="img/img1.jpg"
-             srcset="img/img1@2x.jpg 2x,
-					           img/img1@3x.jpg 3x"
-		         class="gallery-img"
-             alt="photo Long Cotton Gabardine Car Coat">
-        <img src="img/img1.jpg"
-            srcset="img/img1@2x.jpg 2x,
-                    img/img1@3x.jpg 3x"
-            class="gallery-img"
-            alt="photo Long Cotton Gabardine Car Coat">
-      </div>
-      <div class="product__info">
-        <div class="product__price-number">
-          <h2 class="product__price">110 000 руб</h2>
-          <p class="product__number">Item 39428531</p>
+    <div class="container">
+      <section class="product">
+        <h1 class="product__title">Long Cotton Gabardine Car Coat</h1>
+        <div class="row">
+          <div class="col-xs-12 col-md-7">
+            <div class="product__gallery">
+              <img src="img/img1.jpg"
+                   srcset="img/img1@2x.jpg 2x,
+      					           img/img1@3x.jpg 3x"
+      		         class="gallery-img"
+                   alt="photo Long Cotton Gabardine Car Coat">
+              <img src="img/img1.jpg"
+                   srcset="img/img1@2x.jpg 2x,
+                          img/img1@3x.jpg 3x"
+                   class="gallery-img"
+                   alt="photo Long Cotton Gabardine Car Coat">
+              <img src="img/img1.jpg"
+                   srcset="img/img1@2x.jpg 2x,
+                              img/img1@3x.jpg 3x"
+                   class="gallery-img"
+                   alt="photo Long Cotton Gabardine Car Coat">
+              <img src="img/img1.jpg"
+                   srcset="img/img1@2x.jpg 2x,
+                                   img/img1@3x.jpg 3x"
+                   class="gallery-img"
+                   alt="photo Long Cotton Gabardine Car Coat">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-5">
+            <div class="product__info">
+              <div class="product__price-number">
+                <h2 class="product__price">110 000 руб</h2>
+                <p class="product__number">Item 39428531</p>
+              </div>
+              <p class="product__color">Colour: Honey</p>
+              <div class="product__color-picker-btns">
+                <button type="button" name="color-picker" class="color-picker-btn color-picker-btn--black">Choose black color</button>
+                <button type="button" name="color-picker" class="color-picker-btn color-picker-btn--fawn"> Choose fawn color</button>
+              </div>
+            </div>
+            <div class="product__properties-btns">
+              <button type="button" name="size-picker" class="btn btn--bg-black">SELECT A SIZE</button>
+              <button type="submit" name="submit" class="btn btn--bg-white">FIND IN STORE</button>
+              <button type="button" name="size-help" class="product__size-help">NEED SIZE HELP?</button>
+            </div>
+          </div>
         </div>
-        <p class="product__color">Colour: Honey</p>
-        <div class="product__color-picker-btns">
-          <button type="button" name="color-picker" class="color-picker-btn color-picker-btn--black">Choose black color</button>
-          <button type="button" name="color-picker" class="color-picker-btn color-picker-btn--fawn"> Choose fawn color</button>
-        </div>
-      </div>
-      <div class="product__properties-btns">
-        <button type="button" name="size-picker" class="btn btn--bg-black">SELECT A SIZE</button>
-        <button type="submit" name="submit" class="btn btn--bg-white">FIND IN STORE</button>
-        <button type="button" name="size-help" class="product__size-help">NEED SIZE HELP?</button>
-      </div>
-    </section>
+      </section>
 
     <section class="read-more-accordion">
       <button type="button" class="read-more-accordion__button">
@@ -79,36 +96,70 @@
         </ul>
     </section>
 
-    <section class="read-more-accordion">
+    <section class="read-more-accordion shipping-and-returns">
       <button type="button" class="read-more-accordion__button">
         <h2 class="read-more-accordion__title">SHIPPING & RETURNS</h2>
       </button>
     </section>
 
+    <section class="delivery">
+      <div class="row">
+        <div class="col-md-7">
+          <img src="img/img6.jpg"
+		           srcset="img/img6@2x.jpg 2x,
+					             img/img6@3x.jpg 3x"
+               alt="delivery boxing photo"
+		           class="delivery__image">
+        </div>
+        <div class="col-md-5">
+          <h2 class="delivery__title">DELIVERY</h2>
+          <h5 class="delivery__sub-title">Free Next Day Delivery</h5>
+          <p class="delivery__paragraph">Order before 7pm Monday to Thursday for delivery the next day</p>
+
+          <h5 class="delivery__sub-title">Collect-in-Store</h5>
+          <p class="delivery__paragraph">Order online today and pick up your items in store as early as tomorrow</p>
+
+          <h5 class="delivery__sub-title">Free Returns</h5>
+          <p class="delivery__paragraph">Enjoy free returns on your order</p>
+
+          <h5 class="delivery__sub-title">Free Gift Packaging</h5>
+          <p class="delivery__paragraph">Discover our gift packaging, a gold lined box tied with a coloured ribbon</p>
+        </div>
+      </div>
+    </section>
+
     <section class="recommendations">
       <h2 class="recommendations__title">WE RECOMMEND</h2>
-      <div class="recommendations__cards">
-        <a href="#" class="recommendation-card">
-          <img class="recommendation-card__img" src="img/img3.jpg" alt="photo Emroided Hooded">
-          <h3 class="recommendation-card__title">Emroided Hooded</h3>
-          <h5 class="recommendation-card__price">27 000 руб</h5>
-        </a>
-        <a href="#" class="recommendation-card">
-          <img class="recommendation-card__img" src="img/img2.jpg" alt="photo Relaxed Fit Stretch Jeans">
-          <h3 class="recommendation-card__title">Relaxed Fit Stretch Jeans</h3>
-          <h5 class="recommendation-card__price">22 500 руб</h5>
-        </a>
-        <a href="#" class="recommendation-card">
-          <img class="recommendation-card__img" src="img/img4.jpg" alt="photo Leather and House Check">
-          <h3 class="recommendation-card__title">Leather and House Check</h3>
-          <h5 class="recommendation-card__price">120 000 руб</h5>
-        </a>
-        <a href="#" class="recommendation-card">
-          <img class="recommendation-card__img" src="img/img5.jpg" alt="photo Leather Wingtip Check">
-          <h3 class="recommendation-card__title">Leather Wingtip Check</h3>
-          <h5 class="recommendation-card__price">46 000 руб</h5>
-        </a>
-      </div>
+        <div class="row">
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="recommendation-card">
+              <img class="recommendation-card__img" src="img/img3.jpg" alt="photo Emroided Hooded">
+              <h3 class="recommendation-card__title">Emroided Hooded Content For Three Lines</h3>
+              <h5 class="recommendation-card__price">27 000 руб</h5>
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="recommendation-card">
+              <img class="recommendation-card__img" src="img/img2.jpg" alt="photo Relaxed Fit Stretch Jeans">
+              <h3 class="recommendation-card__title">Relaxed Fit Stretch Jeans Content For Three Lines</h3>
+              <h5 class="recommendation-card__price">22 500 руб</h5>
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="recommendation-card">
+              <img class="recommendation-card__img" src="img/img4.jpg" alt="photo Leather and House Check">
+              <h3 class="recommendation-card__title">Leather and House Check Content For Three Lines</h3>
+              <h5 class="recommendation-card__price">120 000 руб</h5>
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="recommendation-card">
+              <img class="recommendation-card__img" src="img/img5.jpg" alt="photo Leather Wingtip Check">
+              <h3 class="recommendation-card__title">Leather Wingtip Check Content For Three Lines</h3>
+              <h5 class="recommendation-card__price">46 000 руб</h5>
+            </a>
+          </div>
+        </div>
     </section>
 
     <section class="additional-offers">
@@ -117,12 +168,96 @@
       <a href="#"class="additional-offers__link">Men’s Short Trench Coats</a>
       <a href="#"class="additional-offers__link">Men’s Long Trench Coats</a>
     </section>
+  </div>
+
 
     <footer class="footer">
-      <button type="button" name="shipping-country" class="footer__button">Shipping country: Russian Federation</button>
-      <button type="button" name="language" class="footer__button">Language: English</button>
-      <h4 class="footer__title">Need help?</h4>
-      <a href="#" class="footer__link">Find out more and contact us</a>
+      <div class="container">
+        <div class="footer-nav">
+          <div class="row">
+            <div class="col-md-3">
+              <h5 class="footer-nav__title">
+                Customer service
+              </h5>
+              <nav>
+                <a href="#" class="footer-nav__link">
+                  Contact Us
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Payment
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Shipping
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Returns
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Faqs
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Live Chat
+                </a>
+                <a href="#" class="footer-nav__link">
+                  The Burberry App
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Store Locator
+                </a>
+              </nav>
+            </div>
+            <div class="col-md-3">
+              <h5 class="footer-nav__title">
+                Our company
+              </h5>
+              <nav>
+                <a href="#" class="footer-nav__link">
+                  Our History
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Burberry Group Plc
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Careers
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Corporate Responsibility
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Site Map
+                </a>
+              </nav>
+            </div>
+            <div class="col-md-3">
+              <h5 class="footer-nav__title">
+                Legal & Cookies
+              </h5>
+              <nav>
+                <a href="#" class="footer-nav__link">
+                  Terms & Conditions
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Privacy Policy
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Cookie Policy
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Accessibility Statement
+                </a>
+                <a href="#" class="footer-nav__link">
+                  Japan Only - SCTL indications
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="footer__buttons">
+          <button type="button" name="shipping-country" class="footer__button">Shipping country: Russian Federation</button><button type="button" name="language" class="footer__button">Language: English</button>
+        </div>
+        <h4 class="footer__title">Need help?</h4>
+        <a href="#" class="footer__link">Find out more and contact us</a>
+      </div>
     </footer>
 
   </body>
