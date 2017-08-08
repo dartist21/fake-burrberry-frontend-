@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Product from './Product';
 import ReadMoreAccordion from './ReadMoreAccordion';
+import Delivery from './Delivery';
 
 class App extends Component {
   render() {
@@ -42,6 +43,7 @@ class App extends Component {
                              className="read-more-accordion" />
           <ReadMoreAccordion title="SHIPPING & RETURNS"
                              className="read-more-accordion shipping-and-returns" />
+          <Delivery />
         </div>
 
       </div>
