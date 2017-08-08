@@ -1,0 +1,82 @@
+.recommendations {
+  padding: 1rem 0.5rem;
+}
+
+.recommendations__title {
+  display: inline-block;
+
+  margin: 2rem 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+
+  color: #171717;
+  border-bottom: 1px solid #171717;
+
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.19;
+}
+
+.recommendations__cards {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recommendation-card {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 2rem;
+
+  text-decoration: none;
+
+  flex-basis: 130px;
+}
+
+.recommendation-card__img {
+  width: 100%;
+}
+
+
+.recommendation-card__title {
+  margin: 0.5rem 0;
+
+  color: #111111;
+
+  font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.19;
+}
+
+.recommendation-card__price {
+  margin: 0;
+  padding-left: 1px;
+
+  color: #999999;
+
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.17;
+}
+
+@media (min-width: 48rem) {
+  .recommendations {
+    padding: 0;
+  }
+
+  .recommendations__title {
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .recommendation-card__price {
+    padding-left: 0;
+  }
+
+  .recommendation-card {
+    margin-bottom: 4rem;
+  }
+}

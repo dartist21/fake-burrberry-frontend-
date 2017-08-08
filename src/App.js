@@ -4,6 +4,9 @@ import Header from './Header';
 import Product from './Product';
 import ReadMoreAccordion from './ReadMoreAccordion';
 import Delivery from './Delivery';
+import Recomendations from './Recomendations'
+import AdditionalOffers from './AdditionalOffers'
+import Footer from './Footer'
 
 class App extends Component {
   render() {
@@ -44,8 +47,10 @@ class App extends Component {
           <ReadMoreAccordion title="SHIPPING & RETURNS"
                              className="read-more-accordion shipping-and-returns" />
           <Delivery />
+          <Recomendations />
+          <AdditionalOffers />
         </div>
-
+        <Footer />
       </div>
     );
   }
