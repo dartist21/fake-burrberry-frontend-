@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import deliveryImage from './assets/img/img6.jpg';
 import './Delivery.css';
 
 class Delivery extends Component {
@@ -8,7 +7,7 @@ class Delivery extends Component {
       <section className="delivery">
         <div className="row">
           <div className="col-md-7">
-            <img src={deliveryImage}
+            <img src="img/img6.jpg"
                  alt="delivery boxing photo"
   		           className="delivery__image" />
           </div>

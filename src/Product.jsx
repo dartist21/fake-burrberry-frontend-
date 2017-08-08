@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import galleryImg from './assets/img/img1.jpg';
 
 import './Product.css';
 
@@ -11,16 +10,16 @@ class Product extends Component {
         <div className="row">
           <div className="col-xs-12 col-md-7">
             <div className="product__gallery">
-              <img src={galleryImg}
+              <img src="img/img1.jpg"
       		         className="gallery-img"
                    alt="Long Cotton Gabardine Car Coat" />
-              <img src={galleryImg}
+              <img src="img/img1.jpg"
                    className="gallery-img"
                    alt="Long Cotton Gabardine Car Coat" />
-              <img src={galleryImg}
+              <img src="img/img1.jpg"
            		     className="gallery-img"
                    alt="Long Cotton Gabardine Car Coat" />
-              <img src={galleryImg}
+              <img src="img/img1.jpg"
                    className="gallery-img"
                    alt="Long Cotton Gabardine Car Coat" />
             </div>
