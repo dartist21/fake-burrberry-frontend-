@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Description.css';
+import './ReadMoreAccordion.css';
 
 class Description extends Component {
   render() {
