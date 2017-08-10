@@ -37,6 +37,7 @@ export default function() {
     <div className="container">
       <Product />
       <ReadMoreAccordion title="Description"
+                         active="active"
                          text={descriptionParagraph}
                          className="read-more-accordion" />
       <ReadMoreAccordion title="SHIPPING & RETURNS"
