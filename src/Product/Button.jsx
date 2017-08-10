@@ -22,18 +22,14 @@ const Button = styled.button`
   font-weight: 400;
   line-height: 1.17;
 
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.textColor};
+  background-color: ${props => props.color};
+  color: ${props => props.label};
 `;
 
 export default props => {
   return (
-    <Button
-      backgroundColor={props.backgroundColor}
-      textColor={props.textColor}
-      type="button"
-    >
-      {props.text}
+    <Button color={props.color} label={props.label} type="button">
+      {props.children}
     </Button>
   );
 };

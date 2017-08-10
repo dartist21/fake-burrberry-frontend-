@@ -63,16 +63,12 @@ export default props => {
         <div className="col-xs-12 col-md-5">
           <MainInfo />
           <PropertiesButtons>
-            <Button
-              backgroundColor="#171717"
-              textColor="#ffffff"
-              text="SELECT A SIZE"
-            />
-            <Button
-              backgroundColor="#ffffff"
-              textColor="#171717"
-              text="FIND IN STORE"
-            />
+            <Button color="#171717" label="#ffffff">
+              SELECT A SIZE
+            </Button>
+            <Button color="#ffffff" label="#171717">
+              FIND IN STORE
+            </Button>
             <HelpButton type="button">NEED SIZE HELP?</HelpButton>
           </PropertiesButtons>
         </div>
