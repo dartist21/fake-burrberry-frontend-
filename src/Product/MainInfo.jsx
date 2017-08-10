@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import ColorBtn from './ColorBtn'
+import ColorBtn from "./ColorBtn";
 
 const MainInfo = styled.div`
   margin: 1rem 0.5rem 2rem 0.5rem;
@@ -53,7 +53,7 @@ const ColorBtnWrapper = styled.div`
 `;
 
 export default () => {
-  return(
+  return (
     <MainInfo>
       <PriceAndNumberWrapper>
         <Price>110 000 руб</Price>
@@ -61,13 +61,8 @@ export default () => {
       </PriceAndNumberWrapper>
       <Color>Colour: Honey</Color>
       <ColorBtnWrapper>
-        <ColorBtn
-          colorValue="#232122"
-          colorName="black"/>
-        <ColorBtn
-          colorValue="#cfa880"
-          colorName="fawn"
-          active="active"/>
+        <ColorBtn colorValue="#232122" colorName="black" />
+        <ColorBtn colorValue="#cfa880" colorName="fawn" active="active" />
       </ColorBtnWrapper>
     </MainInfo>
   );

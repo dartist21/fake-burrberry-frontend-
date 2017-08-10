@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const PropertiesButtons = styled.div`
   margin: 0 0.5rem;
@@ -24,12 +24,15 @@ const Button = styled.button`
 
   background-color: ${props => props.backgroundColor};
   color: ${props => props.textColor};
-`
+`;
 
-export default (props) => {
-  return(
-    <Button backgroundColor={props.backgroundColor} textColor={props.textColor}
-    type="button">
+export default props => {
+  return (
+    <Button
+      backgroundColor={props.backgroundColor}
+      textColor={props.textColor}
+      type="button"
+    >
       {props.text}
     </Button>
   );

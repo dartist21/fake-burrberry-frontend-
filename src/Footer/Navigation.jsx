@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Navigation = styled.div`
   display: none;
@@ -32,85 +32,43 @@ const Link = styled.a`
 `;
 
 export default function() {
-  return(
+  return (
     <Navigation>
       <div className="row">
         <div className="col-md-3">
-          <Title>
-            Customer service
-          </Title>
+          <Title>Customer service</Title>
           <nav>
-            <Link>
-              Contact Us
-            </Link>
-            <Link>
-              Payment
-            </Link>
-            <Link>
-              Shipping
-            </Link>
-            <Link>
-              Returns
-            </Link>
-            <Link>
-              Faqs
-            </Link>
-            <Link>
-              Live Chat
-            </Link>
-            <Link>
-              The Burberry App
-            </Link>
-            <Link>
-              Store Locator
-            </Link>
+            <Link>Contact Us</Link>
+            <Link>Payment</Link>
+            <Link>Shipping</Link>
+            <Link>Returns</Link>
+            <Link>Faqs</Link>
+            <Link>Live Chat</Link>
+            <Link>The Burberry App</Link>
+            <Link>Store Locator</Link>
           </nav>
         </div>
         <div className="col-md-3">
-          <Title>
-            Our company
-          </Title>
+          <Title>Our company</Title>
           <nav>
-            <Link>
-              Our History
-            </Link>
-            <Link>
-              Burberry Group Plc
-            </Link>
-            <Link>
-              Careers
-            </Link>
-            <Link>
-              Corporate Responsibility
-            </Link>
-            <Link>
-              Site Map
-            </Link>
+            <Link>Our History</Link>
+            <Link>Burberry Group Plc</Link>
+            <Link>Careers</Link>
+            <Link>Corporate Responsibility</Link>
+            <Link>Site Map</Link>
           </nav>
         </div>
         <div className="col-md-3">
-          <Title>
-            Legal & Cookies
-          </Title>
+          <Title>Legal & Cookies</Title>
           <nav>
-            <Link>
-              Terms & Conditions
-            </Link>
-            <Link>
-              Privacy Policy
-            </Link>
-            <Link>
-              Cookie Policy
-            </Link>
-            <Link>
-              Accessibility Statement
-            </Link>
-            <Link>
-              Japan Only - SCTL indications
-            </Link>
+            <Link>Terms & Conditions</Link>
+            <Link>Privacy Policy</Link>
+            <Link>Cookie Policy</Link>
+            <Link>Accessibility Statement</Link>
+            <Link>Japan Only - SCTL indications</Link>
           </nav>
         </div>
       </div>
     </Navigation>
   );
-};
+}

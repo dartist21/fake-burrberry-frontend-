@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const AdditionalOffers = styled.section`
   padding: 0 0.5rem 3rem 0.5rem;
@@ -35,7 +35,7 @@ const Link = styled.a`
 `;
 
 export default () => {
-  return(
+  return (
     <AdditionalOffers>
       <Title>MORE FOR YOU</Title>
       <Link>Men’s Black Trench Coats</Link>

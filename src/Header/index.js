@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import logo from '../assets/img/logo.svg';
+import logo from "../assets/img/logo.svg";
 
 const Header = styled.header`
   padding: 1rem 0;
@@ -23,5 +23,5 @@ export default function() {
         <Logo alt="logo" src={logo} />
       </a>
     </Header>
-  )
-};
+  );
+}

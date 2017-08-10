@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const RecommendationCard  = styled.a`
+const RecommendationCard = styled.a`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -13,9 +13,7 @@ const RecommendationCard  = styled.a`
   }
 `;
 
-const Image  = styled.img`
-  width: 100%;
-`;
+const Image = styled.img`width: 100%;`;
 
 const Title = styled.h3`
   margin: 0.5rem 0;
@@ -46,13 +44,10 @@ const Price = styled.h5`
   }
 `;
 
-
-export default (props) => {
+export default props => {
   return (
     <RecommendationCard>
-      <Image
-        alt={props.alt}
-        src={props.image} />
+      <Image alt={props.alt} src={props.image} />
       <Title>
         {props.title}
       </Title>
@@ -60,5 +55,5 @@ export default (props) => {
         {props.price}
       </Price>
     </RecommendationCard>
-  )
-}
+  );
+};

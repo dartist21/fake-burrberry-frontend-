@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import MainInfo from './MainInfo';
-import Button from './Button';
-import Gallery from './Gallery';
+import MainInfo from "./MainInfo";
+import Button from "./Button";
+import Gallery from "./Gallery";
 
 const Product = styled.section`
   padding-bottom: 2.5rem;
@@ -28,7 +28,7 @@ const Title = styled.h1`
     font-size: 1.5rem;
     line-height: 1.17;
   }
-`
+`;
 
 const PropertiesButtons = styled.div`
   margin: 0 0.5rem;
@@ -52,8 +52,8 @@ const HelpButton = styled.button`
   line-height: 1rem;
 `;
 
-export default (props) => {
-  return(
+export default props => {
+  return (
     <Product>
       <Title>Long Cotton Gabardine Car Coat</Title>
       <div className="row">
@@ -63,11 +63,17 @@ export default (props) => {
         <div className="col-xs-12 col-md-5">
           <MainInfo />
           <PropertiesButtons>
-            <Button backgroundColor="#171717" textColor="#ffffff" text="SELECT A SIZE"></Button>
-            <Button backgroundColor="#ffffff" textColor="#171717" text="FIND IN STORE"></Button>
-            <HelpButton type="button">
-              NEED SIZE HELP?
-            </HelpButton>
+            <Button
+              backgroundColor="#171717"
+              textColor="#ffffff"
+              text="SELECT A SIZE"
+            />
+            <Button
+              backgroundColor="#ffffff"
+              textColor="#171717"
+              text="FIND IN STORE"
+            />
+            <HelpButton type="button">NEED SIZE HELP?</HelpButton>
           </PropertiesButtons>
         </div>
       </div>

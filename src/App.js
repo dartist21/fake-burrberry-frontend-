@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import { Helmet } from "react-helmet";
 
-import Header from './Header'
-import Product from './Product';
-import Footer from './Footer'
+import Header from "./Header";
+import Product from "./Product";
+import Footer from "./Footer";
 
 export default function() {
-  return(
+  return (
     <div>
       <Helmet>
         <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
@@ -20,4 +20,4 @@ export default function() {
       <Footer />
     </div>
   );
-};
+}

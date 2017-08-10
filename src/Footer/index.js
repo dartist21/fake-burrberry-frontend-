@@ -1,7 +1,7 @@
-import React  from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Navigation from './Navigation'
+import Navigation from "./Navigation";
 
 const Footer = styled.footer`
   padding: 2rem 0;
@@ -73,19 +73,22 @@ const Link = styled.a`
   }
 `;
 
-
 export default function() {
   return (
     <Footer>
       <div className="container">
         <Navigation />
         <ButtonWrapper>
-          <Button type="button" name="shipping-country">Shipping country: Russian Federation</Button>
-          <Button  type="button" name="language">Language: English</Button>
+          <Button type="button" name="shipping-country">
+            Shipping country: Russian Federation
+          </Button>
+          <Button type="button" name="language">
+            Language: English
+          </Button>
         </ButtonWrapper>
         <Title>Need help?</Title>
         <Link href="#">Find out more and contact us</Link>
       </div>
     </Footer>
   );
-};
+}
