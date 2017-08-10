@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import triangle from "../assets/img/triangle.svg";
+import triangle from '../assets/img/triangle.svg';
 
 const ReadMoreAccordion = styled.section`
   padding: 0 0.5rem;
@@ -41,6 +41,8 @@ const ReadMoreAccordion = styled.section`
     ul {
       margin-bottom: 1.5rem;
     }
+
+    ${props => (props.mobile ? 'display: none' : '')};
   }
 `;
 
@@ -76,7 +78,7 @@ const Title = styled.h2`
     background-image: url(${triangle});
 
     ${props =>
-      props.active ? "transform: translateY(-50%) rotate(180deg);" : ""};
+      props.active ? 'transform: translateY(-50%) rotate(180deg);' : ''};
   }
 
   @media (min-width: 48rem) {
@@ -90,19 +92,13 @@ const Title = styled.h2`
 
 export default props => {
   return (
-    <ReadMoreAccordion>
-      <Button
-        type="button"
-        active={props.active}
-        className="shipping-and-returns"
-      >
-        <Title>
+    <ReadMoreAccordion mobile={props.mobile}>
+      <Button type="button">
+        <Title active={props.active}>
           {props.title}
         </Title>
       </Button>
-      <div>
-        {props.text}
-      </div>
+      {props.children}
     </ReadMoreAccordion>
   );
 };
