@@ -1,51 +1,76 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
-import './Product.css';
+import MainInfo from './MainInfo';
+import Button from './Button';
+import Gallery from './Gallery';
 
-class Product extends Component {
-  render() {
-    return (
-      <section className="product">
-        <h1 className="product__title">Long Cotton Gabardine Car Coat</h1>
-        <div className="row">
-          <div className="col-xs-12 col-md-7">
-            <div className="product__gallery">
-              <img src="img/img1.jpg"
-      		         className="gallery-img"
-                   alt="Long Cotton Gabardine Car Coat" />
-              <img src="img/img1.jpg"
-                   className="gallery-img"
-                   alt="Long Cotton Gabardine Car Coat" />
-              <img src="img/img1.jpg"
-           		     className="gallery-img"
-                   alt="Long Cotton Gabardine Car Coat" />
-              <img src="img/img1.jpg"
-                   className="gallery-img"
-                   alt="Long Cotton Gabardine Car Coat" />
-            </div>
-          </div>
-          <div className="col-xs-12 col-md-5">
-            <div className="product__info">
-              <div className="product__price-number">
-                <h2 className="product__price">110 000 руб</h2>
-                <p className="product__number">Item 39428531</p>
-              </div>
-              <p className="product__color">Colour: Honey</p>
-              <div className="product__color-picker-btns">
-                <button type="button" name="color-picker" className="color-picker-btn color-picker-btn--black">Choose black color</button>
-                <button type="button" name="color-picker" className="color-picker-btn color-picker-btn--fawn"> Choose fawn color</button>
-              </div>
-            </div>
-            <div className="product__properties-btns">
-              <button type="button" name="size-picker" className="btn btn--bg-black">SELECT A SIZE</button>
-              <button type="submit" name="submit" className="btn btn--bg-white">FIND IN STORE</button>
-              <button type="button" name="size-help" className="product__size-help">NEED SIZE HELP?</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
+const Product = styled.section`
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #c6c6c6;
+
+  @media (min-width: 48rem) {
+    padding-bottom: 0;
+    border-bottom: 1px solid #fff;
   }
-}
+`;
 
-export default Product;
+const Title = styled.h1`
+  margin: 1rem 0.5rem;
+  color: #111111;
+  font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+
+  @media (min-width: 48rem) {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.17;
+  }
+`
+
+const PropertiesButtons = styled.div`
+  margin: 0 0.5rem;
+
+  @media (min-width: 48rem) {
+    margin: 0;
+  }
+`;
+
+const HelpButton = styled.button`
+  margin: 0.5rem 0;
+  padding: 0;
+
+  color: #171717;
+  border: 0;
+  background-color: #ffffff;
+
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+`;
+
+export default (props) => {
+  return(
+    <Product>
+      <Title>Long Cotton Gabardine Car Coat</Title>
+      <div className="row">
+        <div className="col-xs-12 col-md-7">
+          <Gallery />
+        </div>
+        <div className="col-xs-12 col-md-5">
+          <MainInfo />
+          <PropertiesButtons>
+            <Button backgroundColor="#171717" textColor="#ffffff" text="SELECT A SIZE"></Button>
+            <Button backgroundColor="#ffffff" textColor="#171717" text="FIND IN STORE"></Button>
+            <HelpButton type="button">
+              NEED SIZE HELP?
+            </HelpButton>
+          </PropertiesButtons>
+        </div>
+      </div>
+    </Product>
+  );
+};
