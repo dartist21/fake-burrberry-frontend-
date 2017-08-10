@@ -1,44 +1,66 @@
 import React, { Component } from 'react';
-import './Recomendations.css';
+import styled from 'styled-components';
 
-class Recomendations extends Component {
-  render() {
-    return (
-      <section className="recommendations">
-      <h2 className="recommendations__title">WE RECOMMEND</h2>
-        <div className="row">
-          <div className="col-xs-6 col-md-3">
-            <a href="#" className="recommendation-card">
-              <img className="recommendation-card__img" src="img/img3.jpg" alt="photo Emroided Hooded" />
-              <h3 className="recommendation-card__title">Emroided Hooded Content For Three Lines</h3>
-              <h5 className="recommendation-card__price">27 000 руб</h5>
-            </a>
-          </div>
-          <div className="col-xs-6 col-md-3">
-            <a href="#" className="recommendation-card">
-              <img className="recommendation-card__img" src="img/img2.jpg" alt="photo Relaxed Fit Stretch Jeans" />
-              <h3 className="recommendation-card__title">Relaxed Fit Stretch Jeans Content For Three Lines</h3>
-              <h5 className="recommendation-card__price">22 500 руб</h5>
-            </a>
-          </div>
-          <div className="col-xs-6 col-md-3">
-            <a href="#" className="recommendation-card">
-              <img className="recommendation-card__img" src="img/img4.jpg" alt="photo Leather and House Check" />
-              <h3 className="recommendation-card__title">Leather and House Check Content For Three Lines</h3>
-              <h5 className="recommendation-card__price">120 000 руб</h5>
-            </a>
-          </div>
-          <div className="col-xs-6 col-md-3">
-            <a href="#" className="recommendation-card">
-              <img className="recommendation-card__img" src="img/img5.jpg" alt="photo Leather Wingtip Check" />
-              <h3 className="recommendation-card__title">Leather Wingtip Check Content For Three Lines</h3>
-              <h5 className="recommendation-card__price">46 000 руб</h5>
-            </a>
-          </div>
-        </div>
-    </section>
-    );
+import RecomendationCard from './RecomendationCard';
+
+const Recomendations = styled.section`
+  padding: 1rem 0.5rem;
+
+  @media (min-width: 48rem) {
+    padding: 0;
   }
-}
+`;
 
-export default Recomendations;
+const Title = styled.h2`
+  display: inline-block;
+  margin: 2rem 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  color: #171717;
+  border-bottom: 1px solid #171717;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.19;
+`;
+
+export default () => {
+  return(
+    <Recomendations>
+    <Title>WE RECOMMEND</Title>
+      <div className="row">
+        <div className="col-xs-6 col-md-3">
+          <RecomendationCard
+            alt = "Emroided Hooded"
+            image = "img/img3.jpg"
+            title = "Emroided Hooded Content For Three Lines"
+            price = "27 000 руб"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <RecomendationCard
+            alt = "Relaxed Fit Stretch Jeans"
+            image = "img/img2.jpg"
+            title = "Relaxed Fit Stretch Jeans Content For Three Lines"
+            price = "22 500 руб"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <RecomendationCard
+            alt = "Leather and House Check"
+            image = "img/img4.jpg"
+            title = "Leather and House Check Content For Three Lines"
+            price = "120 000 руб"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <RecomendationCard
+            alt = "Leather Wingtip Check"
+            image = "img/img5.jpg"
+            title = "Leather Wingtip Check Content For Three Lines"
+            price = "46 000 руб"
+          />
+        </div>
+      </div>
+  </Recomendations>
+  );
+};
