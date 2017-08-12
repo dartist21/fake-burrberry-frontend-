@@ -23,19 +23,18 @@ const MorePhotos = styled.div`
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
+
+  .row div:first-child img {
+    margin-top: 2rem;
+  }
+  .row div:nth-child(2) img {
+    margin-top: 6rem;
+  }
 `;
 
 const Image = styled.img`
   display: block;
   min-width: 100%;
-
-  ${'' /* :nth-of-type(1) {
-    padding-top: 6rem;
-  }
-
-  :nth-of-type(2) {
-    padding-top: 10rem;
-  } */};
 `;
 
 export default function() {
