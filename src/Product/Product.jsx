@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import MainInfo from "./MainInfo";
-import Button from "./Button";
-import Gallery from "./Gallery";
+import MainInfo from './MainInfo';
+import Button from './Button';
+import Gallery from './Gallery';
 
 const Product = styled.section`
   padding-bottom: 2.5rem;
@@ -12,6 +12,10 @@ const Product = styled.section`
   @media (min-width: 48rem) {
     padding-bottom: 0;
     border-bottom: 1px solid #fff;
+  }
+
+  @media (min-width: 62rem) {
+    margin-bottom: 4rem;
   }
 `;
 

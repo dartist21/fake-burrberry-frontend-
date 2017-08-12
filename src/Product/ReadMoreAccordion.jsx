@@ -88,6 +88,10 @@ const Title = styled.h2`
       display: none;
     }
   }
+
+  @media (min-width: 62rem) {
+    margin: 0rem 0 1rem 0;
+  }
 `;
 
 export default props => {

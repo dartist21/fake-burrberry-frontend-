@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Navigation from "./Navigation";
+import Navigation from './Navigation';
 
 const Footer = styled.footer`
   padding: 2rem 0;
@@ -9,6 +9,10 @@ const Footer = styled.footer`
 
   @media (min-width: 48rem) {
     padding: 1rem 0rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    padding: 3rem 0rem;
   }
 `;
 
