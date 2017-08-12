@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import RecomendationCard from "./RecomendationCard";
+import RecomendationCard from './RecomendationCard';
 
 const Recomendations = styled.section`
   padding: 1rem 0.5rem;
@@ -13,14 +13,23 @@ const Recomendations = styled.section`
 
 const Title = styled.h2`
   display: inline-block;
+  width: 100%;
   margin: 2rem 0 1.5rem 0;
   padding-bottom: 0.5rem;
   color: #171717;
-  border-bottom: 1px solid #171717;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.19;
+
+  @media (min-width: 48rem) {
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 62rem) {
+    text-align: center;
+    margin-top: 4rem;
+  }
 `;
 
 export default () => {
