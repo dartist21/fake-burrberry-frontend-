@@ -1,12 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Desktop, DesktopLess } from './BreakPoints';
+import { MinDeviceWidthLarge, MaxDeviceWidthLarge } from './BreakPoints';
 import Product from './Product';
 import ReadMoreAccordion from './ReadMoreAccordion';
 import Delivery from './Delivery';
 import Recomendations from './Recomendations';
 import AdditionalOffers from './AdditionalOffers';
+
+const Section = styled.section`
+  @media screen and (min-width: 62rem) {
+    background: #d4bdad;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+`;
 
 const DescriptionImage = styled.img`
   display: none;
@@ -40,7 +52,9 @@ const Image = styled.img`
 export default function() {
   return (
     <div className="container">
-      <Product />
+      <Section>
+        <Product />
+      </Section>
       <div className="row">
         <div className="col-xs-12 col-lg-4">
           <ReadMoreAccordion title="Description" active>
