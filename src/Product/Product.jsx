@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { MinDeviceWidthLarge, MaxDeviceWidthLarge } from './BreakPoints';
 import MainInfo from './MainInfo';
 import Button from './Button';
 import Gallery from './Gallery';
@@ -32,6 +33,12 @@ const Title = styled.h1`
     font-size: 1.5rem;
     line-height: 1.17;
   }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const PropertiesButtons = styled.div`
@@ -56,15 +63,53 @@ const HelpButton = styled.button`
   line-height: 1rem;
 `;
 
+const Image = styled.img`
+  display: block;
+  margin: 0;
+  height: 651px;
+`;
+
+const Delivery = styled.div`
+  display: none;
+  @media screen and (min-width: 62rem) {
+    display: block;
+    margin-top: 1.5rem;
+  }
+`;
+
+const Subtitle = styled.h3`
+  margin: 0 0 .25rem 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  line-height: .875rem;
+`;
+
+const Content = styled.p`
+  margin: 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  line-height: 1rem;
+`;
+
 export default props => {
   return (
     <Product>
-      <Title>Long Cotton Gabardine Car Coat</Title>
-      <div className="row">
-        <div className="col-xs-12 col-md-7">
-          <Gallery />
+      <MaxDeviceWidthLarge>
+        <Title>Long Cotton Gabardine Car Coat</Title>
+      </MaxDeviceWidthLarge>
+      <div className="row middle-lg">
+        <div className="col-xs-12 col-md-7 col-lg-6">
+          <MaxDeviceWidthLarge>
+            <Gallery />
+          </MaxDeviceWidthLarge>
+          <MinDeviceWidthLarge>
+            <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+          </MinDeviceWidthLarge>
         </div>
-        <div className="col-xs-12 col-md-5">
+        <div className="col-xs-12 col-md-5 col-lg-6">
+          <MinDeviceWidthLarge>
+            <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+          </MinDeviceWidthLarge>
           <MainInfo />
           <PropertiesButtons>
             <Button color="#171717" label="#ffffff">
@@ -75,6 +120,12 @@ export default props => {
             </Button>
             <HelpButton type="button">NEED SIZE HELP?</HelpButton>
           </PropertiesButtons>
+          <Delivery>
+            <Subtitle>Free Next Day Delivery</Subtitle>
+            <Content>
+              Order before 7pm Monday to Thursday for delivery the next day
+            </Content>
+          </Delivery>
         </div>
       </div>
     </Product>

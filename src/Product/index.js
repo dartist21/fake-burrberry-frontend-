@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MinDeviceWidthLarge, MaxDeviceWidthLarge } from './BreakPoints';
 import Product from './Product';
 import ReadMoreAccordion from './ReadMoreAccordion';
 import Delivery from './Delivery';
@@ -53,7 +52,9 @@ export default function() {
   return (
     <div className="container">
       <Section>
-        <Product />
+        <div className="container">
+          <Product />
+        </div>
       </Section>
       <div className="row">
         <div className="col-xs-12 col-lg-4">

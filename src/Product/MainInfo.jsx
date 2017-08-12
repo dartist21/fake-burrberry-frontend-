@@ -1,7 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import ColorBtn from "./ColorBtn";
+import { MinDeviceWidthLarge, MaxDeviceWidthLarge } from './BreakPoints';
+import ColorBtn from './ColorBtn';
+import Size from './Size';
 
 const MainInfo = styled.div`
   margin: 1rem 0.5rem 2rem 0.5rem;
@@ -9,6 +11,10 @@ const MainInfo = styled.div`
 
   @media (min-width: 48rem) {
     margin: 0 0 2rem 0;
+  }
+
+  @media (min-width: 48rem) {
+    border-bottom: none;
   }
 `;
 
@@ -27,6 +33,10 @@ const Price = styled.h2`
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.19;
+
+  @media screen and (min-width: 62rem) {
+    font-weight: 500;
+  }
 `;
 
 const Id = styled.p`
@@ -36,6 +46,10 @@ const Id = styled.p`
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.17;
+
+  @media screen and (min-width: 62rem) {
+    display: none;
+  }
 `;
 
 const Color = styled.p`
@@ -45,6 +59,13 @@ const Color = styled.p`
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 3rem;
+    & span {
+      font-weight: bold;
+    }
+  }
 `;
 
 const ColorBtnWrapper = styled.div`
@@ -59,11 +80,22 @@ export default () => {
         <Price>110 000 руб</Price>
         <Id>Item 39428531</Id>
       </PriceAndNumberWrapper>
-      <Color>Colour: Honey</Color>
-      <ColorBtnWrapper>
-        <ColorBtn colorValue="#232122" colorName="black" />
-        <ColorBtn colorValue="#cfa880" colorName="fawn" active="active" />
-      </ColorBtnWrapper>
+      <div className="row">
+        <div className="col-lg-6">
+          <Color>
+            Colour: <span>Honey</span>
+          </Color>
+          <ColorBtnWrapper>
+            <ColorBtn colorValue="#232122" colorName="black" />
+            <ColorBtn colorValue="#cfa880" colorName="fawn" active="active" />
+          </ColorBtnWrapper>
+        </div>
+        <div className="col-lg-6">
+          <MinDeviceWidthLarge>
+            <Size />
+          </MinDeviceWidthLarge>
+        </div>
+      </div>
     </MainInfo>
   );
 };
