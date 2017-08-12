@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 const Delivery = styled.section`
   display: none;
@@ -38,16 +38,20 @@ const Paragraph = styled.p`
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
   line-height: 1.34;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 `;
 
 export default () => {
   return (
     <Delivery>
-      <div className="row">
+      <div className="row middle-lg">
         <div className="col-md-7">
           <Image src="img/img6.jpg" alt="delivery boxing photo" />
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5 col-lg-4 col-lg-offset-1">
           <Title>DELIVERY</Title>
           <SubTitle>Free Next Day Delivery</SubTitle>
           <Paragraph>
