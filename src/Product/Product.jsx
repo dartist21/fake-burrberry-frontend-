@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MinDeviceWidthLarge, MaxDeviceWidthLarge } from './BreakPoints';
+import { ToLarge, Large } from './BreakPoints';
 import MainInfo from './MainInfo';
 import Button from './Button';
 import Gallery from './Gallery';
@@ -94,22 +94,22 @@ const Content = styled.p`
 export default props => {
   return (
     <Product>
-      <MaxDeviceWidthLarge>
-        <Title>Long Cotton Gabardine Car Coat</Title>
-      </MaxDeviceWidthLarge>
+      <ToLarge>
+        <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+      </ToLarge>
       <div className="row middle-lg">
         <div className="col-xs-12 col-md-7 col-lg-6">
-          <MaxDeviceWidthLarge>
+          <ToLarge>
             <Gallery />
-          </MaxDeviceWidthLarge>
-          <MinDeviceWidthLarge>
+          </ToLarge>
+          <Large>
             <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-          </MinDeviceWidthLarge>
+          </Large>
         </div>
         <div className="col-xs-12 col-md-5 col-lg-6">
-          <MinDeviceWidthLarge>
+          <Large>
             <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-          </MinDeviceWidthLarge>
+          </Large>
           <MainInfo />
           <PropertiesButtons>
             <Button color="#171717" label="#ffffff">

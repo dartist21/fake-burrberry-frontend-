@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MinDeviceWidthLarge, MaxDeviceWidthLarge } from './BreakPoints';
+import { Large, ToLarge } from './BreakPoints';
 import ColorBtn from './ColorBtn';
 import Size from './Size';
 
@@ -87,13 +87,13 @@ export default () => {
           </Color>
           <ColorBtnWrapper>
             <ColorBtn colorValue="#232122" colorName="black" />
-            <ColorBtn colorValue="#cfa880" colorName="fawn" active="active" />
+            <ColorBtn colorValue="#cfa880" colorName="fawn" active />
           </ColorBtnWrapper>
         </div>
         <div className="col-lg-6">
-          <MinDeviceWidthLarge>
+          <Large>
             <Size />
-          </MinDeviceWidthLarge>
+          </Large>
         </div>
       </div>
     </MainInfo>
