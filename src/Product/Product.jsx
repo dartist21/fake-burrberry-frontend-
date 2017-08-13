@@ -12,7 +12,7 @@ const Product = styled.section`
 
   @media (min-width: 48rem) {
     padding-bottom: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: none;
   }
 
   @media (min-width: 62rem) {
@@ -73,7 +73,7 @@ const Delivery = styled.div`
   display: none;
   @media screen and (min-width: 62rem) {
     display: block;
-    margin-top: 1.5rem;
+    margin-top: .5rem;
   }
 `;
 
@@ -112,13 +112,28 @@ export default props => {
           </Large>
           <MainInfo />
           <PropertiesButtons>
-            <Button color="#171717" label="#ffffff">
-              SELECT A SIZE
-            </Button>
-            <Button color="#ffffff" label="#171717">
-              FIND IN STORE
-            </Button>
-            <HelpButton type="button">NEED SIZE HELP?</HelpButton>
+            <div className="row">
+              <div className="col-xs-12 col-lg-6">
+                <ToLarge>
+                  <Button color="#171717" label="#ffffff">
+                    SELECT A SIZE
+                  </Button>
+                </ToLarge>
+                <Large>
+                  <Button color="#171717" label="#ffffff">
+                    ADD TO BAG
+                  </Button>
+                </Large>
+              </div>
+              <div className="col-xs-12 col-lg-6">
+                <Button color="#ffffff" label="#171717">
+                  FIND IN STORE
+                </Button>
+              </div>
+            </div>
+            <ToLarge>
+              <HelpButton type="button">NEED SIZE HELP?</HelpButton>
+            </ToLarge>
           </PropertiesButtons>
           <Delivery>
             <Subtitle>Free Next Day Delivery</Subtitle>

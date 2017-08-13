@@ -13,8 +13,9 @@ const MainInfo = styled.div`
     margin: 0 0 2rem 0;
   }
 
-  @media (min-width: 48rem) {
+  @media (min-width: 62rem) {
     border-bottom: none;
+    margin: 0 0 1.5rem 0;
   }
 `;
 
@@ -54,6 +55,7 @@ const Id = styled.p`
 
 const Color = styled.p`
   margin: 1rem 0;
+  margin-left: .5rem;
   color: #171717;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
@@ -61,6 +63,7 @@ const Color = styled.p`
   line-height: 1rem;
 
   @media screen and (min-width: 62rem) {
+    margin-left: 0;
     margin-top: 3rem;
     & span {
       font-weight: bold;
@@ -71,6 +74,12 @@ const Color = styled.p`
 const ColorBtnWrapper = styled.div`
   display: flex;
   padding-bottom: 2rem;
+  margin-left: .5rem;
+
+  @media screen and (min-width: 62rem) {
+    padding-bottom: 0;
+    margin-left: 0;
+  }
 `;
 
 export default () => {
