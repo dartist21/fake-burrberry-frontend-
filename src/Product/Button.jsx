@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
   width: 100%;
@@ -18,7 +19,16 @@ const Button = styled.button`
   color: ${props => props.label};
 `;
 
-export default props =>
-  (<Button color={props.color} label={props.label} type="button">
-    {props.children}
-  </Button>);
+export default function Export(props) {
+  return (
+    <Button color={props.color} label={props.label} type="button">
+      {props.children}
+    </Button>
+  );
+}
+
+Export.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  color: PropTypes.string.isRequired,
+};

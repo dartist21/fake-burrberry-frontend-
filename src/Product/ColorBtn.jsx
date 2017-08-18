@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ColorBtn = styled.button`
   box-sizing: border-box;
@@ -16,13 +17,20 @@ const ColorBtn = styled.button`
   background-color: ${props => props.colorValue};
 `;
 
-export default props =>
-  (<ColorBtn colorValue={props.colorValue} active={props.active} type="button">
-    Choose {props.colorName} color
-  </ColorBtn>);
+export default function Export(props) {
+  return (
+    <ColorBtn colorValue={props.colorValue} active={props.active} type="button">
+      Choose {props.colorName} color
+    </ColorBtn>
+  );
+}
 
-// Large.propTypes = {
-//   children: PropTypes.node.isRequired,
-//   color: PropTypes.string.isRequired,
-//   label: PropTypes.string.isRequired,
-// };
+Export.propTypes = {
+  colorValue: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  colorName: PropTypes.string.isRequired,
+};
+
+Export.defaultProps = {
+  active: false,
+};

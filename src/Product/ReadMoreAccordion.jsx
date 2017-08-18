@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import triangle from '../assets/img/triangle.svg';
 
@@ -93,13 +94,28 @@ const Title = styled.h2`
   }
 `;
 
-export default props => (
-  <ReadMoreAccordion mobile={props.mobile}>
-    <Button type="button">
-      <Title active={props.active}>
-        {props.title}
-      </Title>
-    </Button>
-    {props.children}
-  </ReadMoreAccordion>
-);
+export default function Export(props) {
+  return (
+    <ReadMoreAccordion mobile={props.mobile}>
+      <Button type="button">
+        <Title active={props.active}>
+          {props.title}
+        </Title>
+      </Button>
+      {props.children}
+    </ReadMoreAccordion>
+  );
+}
+
+Export.propTypes = {
+  mobile: PropTypes.bool.isRequired,
+  active: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+Export.defaultProps = {
+  mobile: false,
+  active: false,
+  children: '',
+};
