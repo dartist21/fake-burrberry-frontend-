@@ -62,7 +62,7 @@ const Help = styled.button`
 `;
 
 export default () =>
-  <Size>
+  (<Size>
     <Header>
       <SelectedSize>
         Size: <Selection>XL</Selection>
@@ -75,4 +75,4 @@ export default () =>
       <Button>L</Button>
       <Button isSelected>XL</Button>
     </Options>
-  </Size>;
+  </Size>);

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Gallery = styled.div`
   position: relative;
@@ -33,13 +33,10 @@ const Image = styled.img`
   }
 `;
 
-export default () => {
-  return (
-    <Gallery>
-      <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-      <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-      <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-      <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-    </Gallery>
-  );
-};
+export default () =>
+  (<Gallery>
+    <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+    <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+    <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+    <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+  </Gallery>);

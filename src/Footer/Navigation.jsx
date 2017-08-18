@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Navigation = styled.div`
   display: none;
@@ -31,7 +31,7 @@ const Link = styled.a`
   line-height: 1.34;
 `;
 
-export default function() {
+export default function () {
   return (
     <Navigation>
       <div className="row">

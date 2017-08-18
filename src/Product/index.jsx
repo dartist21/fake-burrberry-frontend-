@@ -7,11 +7,7 @@ import Delivery from './Delivery';
 import Recomendations from './Recomendations';
 import AdditionalOffers from './AdditionalOffers';
 
-const Section = styled.section`
-  @media screen and (min-width: 62rem) {
-    background: #d4bdad;
-  }
-`;
+const Section = styled.section`@media screen and (min-width: 62rem) {background: #d4bdad;}`;
 
 const DescriptionImage = styled.img`
   display: none;
@@ -42,7 +38,7 @@ const Image = styled.img`
   min-width: 100%;
 `;
 
-export default function() {
+export default function () {
   return (
     <div>
       <Section>
@@ -56,19 +52,17 @@ export default function() {
             <ReadMoreAccordion title="Description" active>
               <p>A refined car coat crafted in protective cotton gabardine.</p>
               <p>
-                Invented by Thomas Burberry in 1879, cotton gabardine is a
-                tightly woven and breathable fabric that protects against wind
-                and rain.
+                Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and
+                breathable fabric that protects against wind and rain.
               </p>
               <p>
-                Raglan sleeves and a concealed button closure complement the
-                clean tailored lines.
+                Raglan sleeves and a concealed button closure complement the clean tailored lines.
               </p>
               <p>The piece is finished with a distinctive check undercollar.</p>
               <ul>
                 <li>
-                  Coat length: 98cm/38.6in. This is based on a size UK 48 as
-                  proportions change slightly according to size.
+                  Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
+                  slightly according to size.
                 </li>
                 <li>Outer: 100% cotton</li>
                 <li>Check lining: 100% cotton</li>

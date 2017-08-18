@@ -1,15 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const PropertiesButtons = styled.div`
-  margin: 0 0.5rem;
-
-  @media (min-width: 48rem) {
-    margin: 0;
-  }
-`;
-
-const Button = styled.button`
+const ButtonStyled = styled.button`
   width: 100%;
   margin: 0;
   margin-bottom: 1rem;
@@ -26,10 +19,16 @@ const Button = styled.button`
   color: ${props => props.label};
 `;
 
-export default props => {
+export default function Button(props) {
   return (
-    <Button color={props.color} label={props.label} type="button">
+    <ButtonStyled color={props.color} label={props.label} type="button">
       {props.children}
-    </Button>
+    </ButtonStyled>
   );
+}
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  color: PropTypes.string.isRequired,
 };

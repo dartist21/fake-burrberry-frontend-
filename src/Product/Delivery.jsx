@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Delivery = styled.section`
@@ -44,36 +44,29 @@ const Paragraph = styled.p`
   }
 `;
 
-export default () => {
-  return (
-    <Delivery>
-      <div className="row middle-lg">
-        <div className="col-md-7">
-          <Image src="img/img6.jpg" alt="delivery boxing photo" />
-        </div>
-        <div className="col-md-5 col-lg-4 col-lg-offset-1">
-          <Title>DELIVERY</Title>
-          <SubTitle>Free Next Day Delivery</SubTitle>
-          <Paragraph>
-            Order before 7pm Monday to Thursday for delivery the next day
-          </Paragraph>
-
-          <SubTitle>Collect-in-Store</SubTitle>
-          <Paragraph>
-            Order online today and pick up your items in store as early as
-            tomorrow
-          </Paragraph>
-
-          <SubTitle>Free Returns</SubTitle>
-          <Paragraph>Enjoy free returns on your order</Paragraph>
-
-          <SubTitle>Free Gift Packaging</SubTitle>
-          <Paragraph>
-            Discover our gift packaging, a gold lined box tied with a coloured
-            ribbon
-          </Paragraph>
-        </div>
+export default () =>
+  (<Delivery>
+    <div className="row middle-lg">
+      <div className="col-md-7">
+        <Image src="img/img6.jpg" alt="delivery boxing photo" />
       </div>
-    </Delivery>
-  );
-};
+      <div className="col-md-5 col-lg-4 col-lg-offset-1">
+        <Title>DELIVERY</Title>
+        <SubTitle>Free Next Day Delivery</SubTitle>
+        <Paragraph>Order before 7pm Monday to Thursday for delivery the next day</Paragraph>
+
+        <SubTitle>Collect-in-Store</SubTitle>
+        <Paragraph>
+          Order online today and pick up your items in store as early as tomorrow
+        </Paragraph>
+
+        <SubTitle>Free Returns</SubTitle>
+        <Paragraph>Enjoy free returns on your order</Paragraph>
+
+        <SubTitle>Free Gift Packaging</SubTitle>
+        <Paragraph>
+          Discover our gift packaging, a gold lined box tied with a coloured ribbon
+        </Paragraph>
+      </div>
+    </div>
+  </Delivery>);

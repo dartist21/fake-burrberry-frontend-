@@ -25,10 +25,10 @@ const Logo = styled.img`
   }
 `;
 
-export default function() {
+export default function () {
   return (
     <Header>
-      <a href="#">
+      <a href="">
         <Logo alt="logo" src={logo} />
       </a>
     </Header>

@@ -1,11 +1,20 @@
 import React from 'react';
 import Responsive from 'react-responsive';
+import PropTypes from 'prop-types';
 
 export const Large = ({ children }) =>
-  <Responsive minWidth={'62rem'}>
+  (<Responsive minWidth={'62rem'}>
     {children}
-  </Responsive>;
+  </Responsive>);
 export const ToLarge = ({ children }) =>
-  <Responsive maxWidth={'62rem'}>
+  (<Responsive maxWidth={'62rem'}>
     {children}
-  </Responsive>;
+  </Responsive>);
+
+Large.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+ToLarge.propTypes = {
+  children: PropTypes.node.isRequired,
+};
