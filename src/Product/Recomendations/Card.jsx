@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const RecommendationCard = styled.a`
+const RecommendationCardStyled = styled.a`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -55,9 +55,9 @@ const Price = styled.h5`
   }
 `;
 
-export default function Export(props) {
+export default function RecommendationCard(props) {
   return (
-    <RecommendationCard>
+    <RecommendationCardStyled>
       <Image alt={props.alt} src={props.image} />
       <Title>
         {props.title}
@@ -65,11 +65,11 @@ export default function Export(props) {
       <Price>
         {props.price}
       </Price>
-    </RecommendationCard>
+    </RecommendationCardStyled>
   );
 }
 
-Export.propTypes = {
+RecommendationCard.propTypes = {
   alt: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
