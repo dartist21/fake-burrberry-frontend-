@@ -77,7 +77,7 @@ const Link = styled.a`
   }
 `;
 
-export default function() {
+export default function () {
   return (
     <Footer>
       <div className="container">

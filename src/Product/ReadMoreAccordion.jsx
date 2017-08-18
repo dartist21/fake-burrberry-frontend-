@@ -77,8 +77,7 @@ const Title = styled.h2`
     transform: translateY(-50%);
     background-image: url(${triangle});
 
-    ${props =>
-      props.active ? 'transform: translateY(-50%) rotate(180deg);' : ''};
+    ${props => (props.active ? 'transform: translateY(-50%) rotate(180deg);' : '')};
   }
 
   @media (min-width: 48rem) {
@@ -94,15 +93,13 @@ const Title = styled.h2`
   }
 `;
 
-export default props => {
-  return (
-    <ReadMoreAccordion mobile={props.mobile}>
-      <Button type="button">
-        <Title active={props.active}>
-          {props.title}
-        </Title>
-      </Button>
-      {props.children}
-    </ReadMoreAccordion>
-  );
-};
+export default props => (
+  <ReadMoreAccordion mobile={props.mobile}>
+    <Button type="button">
+      <Title active={props.active}>
+        {props.title}
+      </Title>
+    </Button>
+    {props.children}
+  </ReadMoreAccordion>
+);

@@ -1,13 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-
-const PropertiesButtons = styled.div`
-  margin: 0 0.5rem;
-
-  @media (min-width: 48rem) {
-    margin: 0;
-  }
-`;
+import React from 'react';
+import styled from 'styled-components';
 
 const Button = styled.button`
   width: 100%;
@@ -26,10 +18,7 @@ const Button = styled.button`
   color: ${props => props.label};
 `;
 
-export default props => {
-  return (
-    <Button color={props.color} label={props.label} type="button">
-      {props.children}
-    </Button>
-  );
-};
+export default props =>
+  (<Button color={props.color} label={props.label} type="button">
+    {props.children}
+  </Button>);

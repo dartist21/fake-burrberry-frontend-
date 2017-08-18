@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const ColorBtn = styled.button`
   box-sizing: border-box;
@@ -12,14 +12,17 @@ const ColorBtn = styled.button`
   border-radius: 50%;
   font-size: 0;
 
-  border: ${props => (props.active ? "solid 1px #232122" : "none")};
+  border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
   background-color: ${props => props.colorValue};
 `;
 
-export default props => {
-  return (
-    <ColorBtn colorValue={props.colorValue} active={props.active} type="button">
-      Choose {props.colorName} color
-    </ColorBtn>
-  );
-};
+export default props =>
+  (<ColorBtn colorValue={props.colorValue} active={props.active} type="button">
+    Choose {props.colorName} color
+  </ColorBtn>);
+
+// Large.propTypes = {
+//   children: PropTypes.node.isRequired,
+//   color: PropTypes.string.isRequired,
+//   label: PropTypes.string.isRequired,
+// };

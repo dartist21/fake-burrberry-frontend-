@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Large, ToLarge } from './BreakPoints';
+import { Large } from './BreakPoints';
 import ColorBtn from './ColorBtn';
 import Size from './Size';
 
@@ -82,29 +82,26 @@ const ColorBtnWrapper = styled.div`
   }
 `;
 
-export default () => {
-  return (
-    <MainInfo>
-      <PriceAndNumberWrapper>
-        <Price>110 000 руб</Price>
-        <Id>Item 39428531</Id>
-      </PriceAndNumberWrapper>
-      <div className="row">
-        <div className="col-lg-6">
-          <Color>
-            Colour: <span>Honey</span>
-          </Color>
-          <ColorBtnWrapper>
-            <ColorBtn colorValue="#232122" colorName="black" />
-            <ColorBtn colorValue="#cfa880" colorName="fawn" active />
-          </ColorBtnWrapper>
-        </div>
-        <div className="col-lg-6">
-          <Large>
-            <Size />
-          </Large>
-        </div>
+export default () =>
+  (<MainInfo>
+    <PriceAndNumberWrapper>
+      <Price>110 000 руб</Price>
+      <Id>Item 39428531</Id>
+    </PriceAndNumberWrapper>
+    <div className="row">
+      <div className="col-lg-6">
+        <Color>
+          Colour: <span>Honey</span>
+        </Color>
+        <ColorBtnWrapper>
+          <ColorBtn colorValue="#232122" colorName="black" />
+          <ColorBtn colorValue="#cfa880" colorName="fawn" active />
+        </ColorBtnWrapper>
       </div>
-    </MainInfo>
-  );
-};
+      <div className="col-lg-6">
+        <Large>
+          <Size />
+        </Large>
+      </div>
+    </div>
+  </MainInfo>);

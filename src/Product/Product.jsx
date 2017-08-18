@@ -91,58 +91,53 @@ const Content = styled.p`
   line-height: 1rem;
 `;
 
-export default props => {
-  return (
-    <Product>
-      <ToLarge>
-        <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-      </ToLarge>
-      <div className="row middle-lg">
-        <div className="col-xs-12 col-md-7 col-lg-6">
-          <ToLarge>
-            <Gallery />
-          </ToLarge>
-          <Large>
-            <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-          </Large>
-        </div>
-        <div className="col-xs-12 col-md-5 col-lg-6">
-          <Large>
-            <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-          </Large>
-          <MainInfo />
-          <PropertiesButtons>
-            <div className="row">
-              <div className="col-xs-12 col-lg-6">
-                <ToLarge>
-                  <Button color="#171717" label="#ffffff">
-                    SELECT A SIZE
-                  </Button>
-                </ToLarge>
-                <Large>
-                  <Button color="#171717" label="#ffffff">
-                    ADD TO BAG
-                  </Button>
-                </Large>
-              </div>
-              <div className="col-xs-12 col-lg-6">
-                <Button color="#ffffff" label="#171717">
-                  FIND IN STORE
-                </Button>
-              </div>
-            </div>
-            <ToLarge>
-              <HelpButton type="button">NEED SIZE HELP?</HelpButton>
-            </ToLarge>
-          </PropertiesButtons>
-          <Delivery>
-            <Subtitle>Free Next Day Delivery</Subtitle>
-            <Content>
-              Order before 7pm Monday to Thursday for delivery the next day
-            </Content>
-          </Delivery>
-        </div>
+export default () =>
+  (<Product>
+    <ToLarge>
+      <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+    </ToLarge>
+    <div className="row middle-lg">
+      <div className="col-xs-12 col-md-7 col-lg-6">
+        <ToLarge>
+          <Gallery />
+        </ToLarge>
+        <Large>
+          <Image src="img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+        </Large>
       </div>
-    </Product>
-  );
-};
+      <div className="col-xs-12 col-md-5 col-lg-6">
+        <Large>
+          <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+        </Large>
+        <MainInfo />
+        <PropertiesButtons>
+          <div className="row">
+            <div className="col-xs-12 col-lg-6">
+              <ToLarge>
+                <Button color="#171717" label="#ffffff">
+                  SELECT A SIZE
+                </Button>
+              </ToLarge>
+              <Large>
+                <Button color="#171717" label="#ffffff">
+                  ADD TO BAG
+                </Button>
+              </Large>
+            </div>
+            <div className="col-xs-12 col-lg-6">
+              <Button color="#ffffff" label="#171717">
+                FIND IN STORE
+              </Button>
+            </div>
+          </div>
+          <ToLarge>
+            <HelpButton type="button">NEED SIZE HELP?</HelpButton>
+          </ToLarge>
+        </PropertiesButtons>
+        <Delivery>
+          <Subtitle>Free Next Day Delivery</Subtitle>
+          <Content>Order before 7pm Monday to Thursday for delivery the next day</Content>
+        </Delivery>
+      </div>
+    </div>
+  </Product>);

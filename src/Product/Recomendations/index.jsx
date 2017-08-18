@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
@@ -32,44 +32,42 @@ const Title = styled.h2`
   }
 `;
 
-export default () => {
-  return (
-    <Recomendations>
-      <Title>WE RECOMMEND</Title>
-      <div className="row">
-        <div className="col-xs-6 col-md-3">
-          <Card
-            alt="Emroided Hooded"
-            image="img/img3.jpg"
-            title="Emroided Hooded Content For Three Lines"
-            price="27 000 руб"
-          />
-        </div>
-        <div className="col-xs-6 col-md-3">
-          <Card
-            alt="Relaxed Fit Stretch Jeans"
-            image="img/img2.jpg"
-            title="Relaxed Fit Stretch Jeans Content For Three Lines"
-            price="22 500 руб"
-          />
-        </div>
-        <div className="col-xs-6 col-md-3">
-          <Card
-            alt="Leather and House Check"
-            image="img/img4.jpg"
-            title="Leather and House Check Content For Three Lines"
-            price="120 000 руб"
-          />
-        </div>
-        <div className="col-xs-6 col-md-3">
-          <Card
-            alt="Leather Wingtip Check"
-            image="img/img5.jpg"
-            title="Leather Wingtip Check Content For Three Lines"
-            price="46 000 руб"
-          />
-        </div>
+export default () => (
+  <Recomendations>
+    <Title>WE RECOMMEND</Title>
+    <div className="row">
+      <div className="col-xs-6 col-md-3">
+        <Card
+          alt="Emroided Hooded"
+          image="img/img3.jpg"
+          title="Emroided Hooded Content For Three Lines"
+          price="27 000 руб"
+        />
       </div>
-    </Recomendations>
-  );
-};
+      <div className="col-xs-6 col-md-3">
+        <Card
+          alt="Relaxed Fit Stretch Jeans"
+          image="img/img2.jpg"
+          title="Relaxed Fit Stretch Jeans Content For Three Lines"
+          price="22 500 руб"
+        />
+      </div>
+      <div className="col-xs-6 col-md-3">
+        <Card
+          alt="Leather and House Check"
+          image="img/img4.jpg"
+          title="Leather and House Check Content For Three Lines"
+          price="120 000 руб"
+        />
+      </div>
+      <div className="col-xs-6 col-md-3">
+        <Card
+          alt="Leather Wingtip Check"
+          image="img/img5.jpg"
+          title="Leather Wingtip Check Content For Three Lines"
+          price="46 000 руб"
+        />
+      </div>
+    </div>
+  </Recomendations>
+);

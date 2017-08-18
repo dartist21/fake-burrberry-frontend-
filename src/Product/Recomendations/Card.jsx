@@ -54,16 +54,14 @@ const Price = styled.h5`
   }
 `;
 
-export default props => {
-  return (
-    <RecommendationCard>
-      <Image alt={props.alt} src={props.image} />
-      <Title>
-        {props.title}
-      </Title>
-      <Price>
-        {props.price}
-      </Price>
-    </RecommendationCard>
-  );
-};
+export default props => (
+  <RecommendationCard>
+    <Image alt={props.alt} src={props.image} />
+    <Title>
+      {props.title}
+    </Title>
+    <Price>
+      {props.price}
+    </Price>
+  </RecommendationCard>
+);
