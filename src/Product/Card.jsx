@@ -45,6 +45,11 @@ const Title = styled.h2`
   margin-bottom: .5rem;
   font-weight: 600;
   font-size: .75rem;
+
+  @media only screen and (min-width: 48rem) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 `;
 
 const Colors = styled.p`

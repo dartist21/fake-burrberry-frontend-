@@ -15,6 +15,13 @@ const SectionTitle = styled.h2`
   font-weight: 500;
   padding-top: 2rem;
   padding-bottom: 1rem;
+
+  @media only screen and (min-width: 48rem) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 `;
 
 const Showing = styled.p`
@@ -24,6 +31,13 @@ const Showing = styled.p`
   font-size: 1rem;
   text-align: center;
   line-height: 1;
+
+  @media only screen and (min-width: 48rem) {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 `;
 
 const ShowMore = styled.button`
