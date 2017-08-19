@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import Category from './Category';
 import Card from './Card';
@@ -42,6 +43,14 @@ const ShowMore = styled.button`
 
 export default () =>
   (<main>
+    <Helmet>
+      <title>Men’s Clothing | Burberry</title>
+      <meta
+        name="description"
+        content="Shop from the current men’s clothing collection. Sartorial suits,
+        shirts and trousers feature as well as casual T-shirts, polos and jeans."
+      />
+    </Helmet>
     <Category />
     <div className="container">
       <SectionTitle>Heritage Trench Coats</SectionTitle>
