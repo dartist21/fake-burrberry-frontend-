@@ -40,6 +40,10 @@ const Button = styled.button`
   font-weight: 400;
   line-height: 1.34;
 
+  span {
+    color: #171717;
+  }
+
   @media (min-width: 48rem) {
     margin-right: 1.5rem;
   }
@@ -83,10 +87,10 @@ export default function () {
         <Navigation />
         <ButtonWrapper>
           <Button type="button" name="shipping-country">
-            Shipping country: Russian Federation
+            Shipping country: <span>Russian Federation</span>
           </Button>
           <Button type="button" name="language">
-            Language: English
+            Language: <span>English</span>
           </Button>
         </ButtonWrapper>
         <Title>Need help?</Title>

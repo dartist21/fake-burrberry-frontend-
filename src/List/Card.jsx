@@ -14,7 +14,6 @@ const StyledLink = styled(Link)`
 
 const Card = styled.div`
   margin-bottom: 2rem;
-  padding-bottom: 1rem;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
   line-height: 1.34;

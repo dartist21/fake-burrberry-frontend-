@@ -17,7 +17,7 @@ const SectionTitle = styled.h2`
 `;
 
 const Showing = styled.p`
-  margin: 1rem 0;
+  margin: 3rem 0 1rem 0;
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1rem;
