@@ -17,8 +17,8 @@ export default function () {
         <div>
           <Header />
           <Route exact path="/" component={List} />
-          <Route exact path="/products/mens-clothing" component={List} />
-          <Route path="/products/mens-clothing/:id" component={Product} />
+          <Route exact path="/mens-clothing" component={List} />
+          <Route path="/mens-clothing/:id" component={Product} />
           <Footer />
         </div>
       </Router>

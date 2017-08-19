@@ -70,7 +70,7 @@ const Price = styled.h5`
 export default function ProductCard(props) {
   return (
     <Card>
-      <StyledLink to="/products/mens-clothing/long-cotton-gabardine-car-coat">
+      <StyledLink to="/mens-clothing/long-cotton-gabardine-car-coat">
         <Img src={props.image} alt={props.title} />
       </StyledLink>
       <Wrapper>
@@ -78,7 +78,7 @@ export default function ProductCard(props) {
           <Label>
             {props.label}
           </Label>
-          <StyledLink to="/products/men-clothing/long-cotton-gabardine-car-coat">
+          <StyledLink to="/mens-clothing/long-cotton-gabardine-car-coat">
             <Title>
               {props.title}
             </Title>
