@@ -31,6 +31,25 @@ const Link = styled.a`
   line-height: 1.34;
 `;
 
+const Image = styled.img`
+  margin-top: 1rem;
+  display: block;
+  height: 154px;
+  margin-bottom: 1rem;
+`;
+
+const ImageTitle = styled.a`
+  margin-top: 1rem;
+  font-family: Raleway;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #171717;
+  text-decoration: none;
+  cursor: pointer;
+`;
+
 export default function () {
   return (
     <Navigation>
@@ -67,6 +86,13 @@ export default function () {
             <Link>Accessibility Statement</Link>
             <Link>Japan Only - SCTL indications</Link>
           </nav>
+        </div>
+        <div className="col-md-3">
+          <Image
+            src="http://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg"
+            alt="shop"
+          />
+          <ImageTitle>Find a store</ImageTitle>
         </div>
       </div>
     </Navigation>
