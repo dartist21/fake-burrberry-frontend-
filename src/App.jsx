@@ -21,8 +21,9 @@ export default function () {
           />
         </Helmet>
         <Header />
-        <Route exact path="/products" component={List} />
-        <Route path="/products/:id" component={Product} />
+        <Route exact path="/" component={List} />
+        <Route exact path="/mens-clothing" component={List} />
+        <Route path="/mens-clothing/:id" component={Product} />
         <Footer />
       </div>
     </Router>

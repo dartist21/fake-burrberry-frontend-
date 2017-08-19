@@ -35,8 +35,8 @@ const Image = styled.img`
 
 export default () =>
   (<Gallery>
-    <Image src="/img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-    <Image src="/img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-    <Image src="/img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
-    <Image src="/img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
+    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
+    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
+    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
   </Gallery>);

@@ -39,7 +39,7 @@ export default () =>
       <div className="col-xs-6 col-md-3">
         <Card
           alt="Emroided Hooded"
-          image="/img/img3.jpg"
+          image={`${process.env.PUBLIC_URL}/img/img3.jpg`}
           title="Emroided Hooded Content For Three Lines"
           price="27 000 руб"
         />
@@ -47,7 +47,7 @@ export default () =>
       <div className="col-xs-6 col-md-3">
         <Card
           alt="Relaxed Fit Stretch Jeans"
-          image="/img/img2.jpg"
+          image={`${process.env.PUBLIC_URL}/img/img2.jpg`}
           title="Relaxed Fit Stretch Jeans Content For Three Lines"
           price="22 500 руб"
         />
@@ -55,7 +55,7 @@ export default () =>
       <div className="col-xs-6 col-md-3">
         <Card
           alt="Leather and House Check"
-          image="/img/img4.jpg"
+          image={`${process.env.PUBLIC_URL}/img/img4.jpg`}
           title="Leather and House Check Content For Three Lines"
           price="120 000 руб"
         />
@@ -63,7 +63,7 @@ export default () =>
       <div className="col-xs-6 col-md-3">
         <Card
           alt="Leather Wingtip Check"
-          image="/img/img5.jpg"
+          image={`${process.env.PUBLIC_URL}/img/img5.jpg`}
           title="Leather Wingtip Check Content For Three Lines"
           price="46 000 руб"
         />
