@@ -16,6 +16,30 @@ const SectionTitle = styled.h2`
   padding-bottom: 1rem;
 `;
 
+const Showing = styled.p`
+  margin: 1rem 0;
+  font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1;
+`;
+
+const ShowMore = styled.button`
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  padding: 1rem 2rem;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.34;
+  color: #171717;
+  background-color: #fff;
+  border: 1px solid #171717;
+  border-radius: 2px;
+`;
+
 export default () =>
   (<main>
     <Category />
@@ -155,7 +179,7 @@ export default () =>
         <div className="col-xs-6 col-md-3">
           <Card
             image="https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&hei=720&wid=540"
-            title="The Westminster – Long Heritage Trench Coat"
+            title="The Westminster – Long Heritage Trench"
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
@@ -164,12 +188,14 @@ export default () =>
         <div className="col-xs-6 col-md-3">
           <Card
             image="https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&hei=720&wid=540"
-            title="The Westminster – Long Heritage Trench Coat"
+            title="The Westminster – Long Heritage Trench"
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
           />
         </div>
       </div>
+      <Showing>Showing 8 of 17</Showing>
+      <ShowMore type="button">View 9 more</ShowMore>
     </div>
   </main>);

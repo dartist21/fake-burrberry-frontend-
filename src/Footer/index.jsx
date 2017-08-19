@@ -19,7 +19,6 @@ const Footer = styled.footer`
 const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 0.5rem;
 
   @media (min-width: 48rem) {
     flex-direction: row;
