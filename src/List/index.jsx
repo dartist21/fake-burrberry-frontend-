@@ -1,9 +1,7 @@
 import React from 'react';
 
+import Category from './Category';
+
 export default function () {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+  return <Category />;
 }
