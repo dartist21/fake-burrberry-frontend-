@@ -6,6 +6,7 @@ import arrow from '../../../../assets/img/arrow.svg';
 const OptionStyled = styled.button`
   flex-shrink: 0;
   margin: 2rem 1rem 0 0;
+  margin-left: ${props => (props.right ? 'auto' : '')};
   padding: 0;
   border: none;
   font-family: Raleway;
@@ -24,11 +25,18 @@ const OptionStyled = styled.button`
     background-image: url(${arrow});
     background-size: cover;
     flex-shrink: 0;
+  }
+
+  @media only screen and (min-width: 48rem) {
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+    margin-right: ${props => (props.right ? '0' : '')};
+  }
 `;
 
 export default function Option(props) {
   return (
-    <OptionStyled value={props.value}>
+    <OptionStyled right={props.right} value={props.value}>
       {props.value}
     </OptionStyled>
   );
@@ -36,4 +44,9 @@ export default function Option(props) {
 
 Option.propTypes = {
   value: PropTypes.string.isRequired,
+  right: PropTypes.bool.isRequired,
+};
+
+Option.defaultProps = {
+  active: false,
 };

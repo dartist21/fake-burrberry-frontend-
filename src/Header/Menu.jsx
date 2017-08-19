@@ -6,7 +6,7 @@ const Link = styled(NavLink)`
   display: inline-block;
   padding: 1rem;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.75rem;
   line-height: 1rem;
   letter-spacing: 1.5px;

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Option from './Option';
 
+import { ToMedium } from '../../../Show/BreakPoints';
+
 const Filter = styled.div`
   display: flex;
   padding-bottom: 1.5rem;
@@ -11,7 +13,7 @@ const Filter = styled.div`
 `;
 
 const Refine = styled.p`
-  margin: 2rem 2rem 0 0.5rem;
+  margin: 2rem 2rem 0 0;
   font-family: Raleway;
   font-size: 0.75rem;
   line-height: 1.42;
@@ -20,10 +22,14 @@ const Refine = styled.p`
   flex-shrink: 0;
 `;
 export default () =>
-  (<Filter>
-    <Refine>Refine by</Refine>
-    <Option value="Category" />
-    <Option value="Colour" />
-    <Option value="Size" />
-    <Option value="Sort by price" />
-  </Filter>);
+  (<div className="container">
+    <Filter>
+      <ToMedium>
+        <Refine>Refine by</Refine>
+      </ToMedium>
+      <Option value="Category" />
+      <Option value="Colour" />
+      <Option value="Size" />
+      <Option right value="Sort by price" />
+    </Filter>
+  </div>);

@@ -13,6 +13,10 @@ const Title = styled.h1`
   line-height: 2rem;
   color: #171717;
   font-weight: 400;
+
+  @media only screen and (min-width: 48rem) {
+    padding-top: 4rem;
+  }
 `;
 
 const Description = styled.p`

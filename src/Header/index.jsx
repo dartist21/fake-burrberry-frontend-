@@ -13,6 +13,9 @@ const Header = styled.header`
   @media screen and (min-width: 48rem) {
     padding: 1.5rem 0 0 0;
   }
+  @media screen and (min-width: 62rem) {
+    padding-top: 2rem;
+  }
 `;
 
 const Logo = styled.img`
@@ -26,6 +29,7 @@ const Logo = styled.img`
 `;
 
 const Shopping = styled.button`
+  display: block;
   vertical-align: middle;
   position: relative;
   padding: 0;
