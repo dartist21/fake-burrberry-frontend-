@@ -87,7 +87,6 @@ export default function () {
           <div className="col-lg-8">
             <DescriptionImage
               src={`${process.env.PUBLIC_URL}/img/img7.jpg`}
-              srcSet="/img/img7@3x.jpg 3x"
               alt="Long Cotton Gabardine Car Coat Detail"
             />
           </div>
@@ -98,7 +97,6 @@ export default function () {
               <Image
                 first
                 src={`${process.env.PUBLIC_URL}/img/img8.jpg`}
-                srcSet="/img/img8@3x.jpg 3x"
                 alt="Long Cotton Gabardine Car Coat Detail"
               />
             </div>
@@ -106,14 +104,12 @@ export default function () {
               <Image
                 second
                 src={`${process.env.PUBLIC_URL}/img/img9.jpg`}
-                srcSet="/img/img9@3x.jpg 3x"
                 alt="Long Cotton Gabardine Car Coat Detail"
               />
             </div>
             <div className="col-lg-4">
               <Image
                 src={`${process.env.PUBLIC_URL}/img/img10.jpg`}
-                srcSet="/img/img10@3x.jpg 3x"
                 alt="Long Cotton Gabardine Car Coat Detail"
               />
             </div>

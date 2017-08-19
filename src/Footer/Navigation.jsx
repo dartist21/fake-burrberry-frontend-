@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Large } from '../Product/Show/BreakPoints';
 
 const Navigation = styled.div`
   display: none;
@@ -88,11 +89,13 @@ export default function () {
           </nav>
         </div>
         <div className="col-md-3">
-          <Image
-            src="http://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg"
-            alt="shop"
-          />
-          <ImageTitle>Find a store</ImageTitle>
+          <Large>
+            <Image
+              src="http://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg"
+              alt="shop"
+            />
+            <ImageTitle>Find a store</ImageTitle>
+          </Large>
         </div>
       </div>
     </Navigation>
