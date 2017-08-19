@@ -4,8 +4,8 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
 
 import Header from './Header';
-import Product from './Product';
-import List from './List';
+import Product from './Product/Show';
+import List from './Product/List';
 import Footer from './Footer';
 
 addLocaleData([...ru]);

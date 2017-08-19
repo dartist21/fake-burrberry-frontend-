@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import triangle from '../assets/img/triangle.svg';
+import triangle from '../../assets/img/triangle.svg';
 
 const ReadMoreAccordion = styled.section`
   padding: 0 0.5rem;

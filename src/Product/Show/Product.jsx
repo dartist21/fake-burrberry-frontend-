@@ -102,7 +102,10 @@ export default () =>
           <Gallery />
         </ToLarge>
         <Large>
-          <Image src="/img/img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+          <Image
+            src={`${process.env.PUBLIC_URL}/img/img1.jpg`}
+            alt="Long Cotton Gabardine Car Coat"
+          />
         </Large>
       </div>
       <div className="col-xs-12 col-md-5 col-lg-6">

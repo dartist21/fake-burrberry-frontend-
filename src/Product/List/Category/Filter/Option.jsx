@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import arrow from '../../../assets/img/arrow.svg';
+import arrow from '../../../../assets/img/arrow.svg';
 
 const OptionStyled = styled.button`
   flex-shrink: 0;

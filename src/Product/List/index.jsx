@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 import Category from './Category';
-import Card from './Card';
-import Hr from '../Common/Hr';
+import Card from '../Card';
+import Hr from '../../Common/Hr';
 
 const SectionTitle = styled.h2`
   margin: 0;
