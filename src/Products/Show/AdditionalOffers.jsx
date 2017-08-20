@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
 
 const AdditionalOffers = styled.section`
   padding: 0 0.5rem 3rem 0.5rem;
@@ -22,7 +23,7 @@ const Title = styled.h2`
   line-height: 1.19;
 `;
 
-const Link = styled.a`
+const Link = styled(RouterLink)`
   display: block;
   margin-bottom: 1rem;
   text-decoration: none;
@@ -34,11 +35,10 @@ const Link = styled.a`
   line-height: 1.215;
 `;
 
-export default () => (
-  <AdditionalOffers>
+export default () =>
+  (<AdditionalOffers>
     <Title>MORE FOR YOU</Title>
     <Link>Men’s Black Trench Coats</Link>
     <Link>Men’s Short Trench Coats</Link>
     <Link>Men’s Long Trench Coats</Link>
-  </AdditionalOffers>
-);
+  </AdditionalOffers>);
