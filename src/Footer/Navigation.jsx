@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { Large } from '../Product/Show/BreakPoints';
+import { Large } from '../Common/BreakPoints';
 
 const Navigation = styled.div`
   display: none;

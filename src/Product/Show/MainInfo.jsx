@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Large } from './BreakPoints';
+import { Large } from '../../Common/BreakPoints';
 import ColorBtn from './ColorBtn';
 import Size from './Size';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Option from './Option';
 
-import { ToMedium } from '../../../Show/BreakPoints';
+import { ToMedium } from '../../../../Common/BreakPoints';
 
 const Filter = styled.div`
   display: flex;

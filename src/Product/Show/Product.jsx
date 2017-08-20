@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ToLarge, Large } from './BreakPoints';
+import { ToLarge, Large } from '../../Common/BreakPoints';
 import MainInfo from './MainInfo';
 import Button from './Button';
 import Gallery from './Gallery';
