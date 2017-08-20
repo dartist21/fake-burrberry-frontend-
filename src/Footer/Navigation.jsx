@@ -28,7 +28,7 @@ const Link = styled.a`
   color: #999999;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.34;
 `;
 

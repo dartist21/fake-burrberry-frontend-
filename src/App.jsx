@@ -8,7 +8,7 @@ import Product from './Product/Show';
 import List from './Product/List';
 import Footer from './Footer';
 
-addLocaleData([...ru]);
+addLocaleData(ru);
 
 export default function () {
   return (

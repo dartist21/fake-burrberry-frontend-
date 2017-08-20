@@ -35,7 +35,7 @@ const Shopping = styled.button`
   padding: 0;
   padding-right: 1.25rem;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.75rem;
   line-height: 1.34;
   color: #999999;
