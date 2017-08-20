@@ -4,8 +4,8 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
 
 import Header from './Header';
-import Product from './Product/Show';
-import List from './Product/List';
+import Show from './Products/Show';
+import List from './Products/List';
 import Footer from './Footer';
 
 addLocaleData(ru);
@@ -18,7 +18,7 @@ export default function () {
           <Header />
           <Route exact path="/" component={List} />
           <Route exact path="/mens-clothing" component={List} />
-          <Route path="/mens-clothing/:id" component={Product} />
+          <Route path="/mens-clothing/:id" component={Show} />
           <Footer />
         </div>
       </Router>
