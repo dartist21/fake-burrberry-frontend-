@@ -48,5 +48,5 @@ Option.propTypes = {
 };
 
 Option.defaultProps = {
-  active: false,
+  right: false,
 };

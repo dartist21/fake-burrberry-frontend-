@@ -75,7 +75,7 @@ const Price = styled.h5`
 export default function ProductCard(props) {
   return (
     <Card>
-      <StyledLink to="/mens-clothing/long-cotton-gabardine-car-coat">
+      <StyledLink to={props.to}>
         <Img src={props.image} alt={props.title} />
       </StyledLink>
       <Wrapper>
@@ -83,7 +83,7 @@ export default function ProductCard(props) {
           <Label>
             {props.label}
           </Label>
-          <StyledLink to="/mens-clothing/long-cotton-gabardine-car-coat">
+          <StyledLink to={props.to}>
             <Title>
               {props.title}
             </Title>
@@ -111,4 +111,5 @@ ProductCard.propTypes = {
   label: PropTypes.string.isRequired,
   colorsNumber: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
+  to: PropTypes.string.isRequired,
 };

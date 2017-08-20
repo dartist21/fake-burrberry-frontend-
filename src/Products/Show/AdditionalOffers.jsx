@@ -38,7 +38,7 @@ const Link = styled(RouterLink)`
 export default () =>
   (<AdditionalOffers>
     <Title>MORE FOR YOU</Title>
-    <Link>Men’s Black Trench Coats</Link>
-    <Link>Men’s Short Trench Coats</Link>
-    <Link>Men’s Long Trench Coats</Link>
+    <Link to="">Men’s Black Trench Coats</Link>
+    <Link to="">Men’s Short Trench Coats</Link>
+    <Link to="">Men’s Long Trench Coats</Link>
   </AdditionalOffers>);

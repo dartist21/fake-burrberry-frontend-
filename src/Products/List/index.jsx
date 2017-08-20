@@ -76,6 +76,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -85,6 +86,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -94,6 +96,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -103,6 +106,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -112,6 +116,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -121,6 +126,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -130,6 +136,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -139,6 +146,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
       </div>
@@ -152,6 +160,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -161,6 +170,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -170,6 +180,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -179,6 +190,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -188,6 +200,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -197,6 +210,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -206,6 +220,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
         <div className="col-xs-6 col-md-3">
@@ -215,6 +230,7 @@ export default () =>
             label="Relaxed fit"
             colorsNumber={3}
             price={120000}
+            to="/mens-clothing/long-cotton-gabardine-car-coat"
           />
         </div>
       </div>
