@@ -11,6 +11,10 @@ const Navigation = styled.div`
   @media (min-width: 48rem) {
     display: block;
   }
+
+  @media (min-width: 62rem) {
+    margin-bottom: 2.25rem;
+  }
 `;
 
 const Title = styled.h5`

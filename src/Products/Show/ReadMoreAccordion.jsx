@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import triangle from '../../assets/img/triangle.svg';
 
 const ReadMoreAccordionStyled = styled.section`
-  padding: 0 0.5rem;
   border-bottom: 1px solid #c6c6c6;
 
   p {
@@ -36,7 +35,7 @@ const ReadMoreAccordionStyled = styled.section`
   }
 
   @media (min-width: 48rem) {
-    padding: 0 1rem 0 0;
+    padding: 0 1rem 1.5rem 0;
     border-bottom: 0;
 
     ul {

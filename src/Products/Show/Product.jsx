@@ -21,7 +21,7 @@ const Product = styled.section`
 `;
 
 const Title = styled.h1`
-  margin: 1rem 0.5rem;
+  margin: 1rem 0;
   color: #111111;
   font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
@@ -42,7 +42,7 @@ const Title = styled.h1`
 `;
 
 const PropertiesButtons = styled.div`
-  margin: 0 0.5rem;
+  margin: 0 0;
 
   @media (min-width: 48rem) {
     margin: 0;

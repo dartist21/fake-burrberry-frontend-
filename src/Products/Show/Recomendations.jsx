@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Card from '../Card';
 
 const Recomendations = styled.section`
-  padding: 1rem 0.5rem;
+  padding: 0 0.5rem 1rem 0;
 
   @media (min-width: 48rem) {
     padding-bottom: 2rem;
@@ -23,10 +23,13 @@ const Title = styled.h2`
   line-height: 1.19;
 
   @media (min-width: 48rem) {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
     margin-top: 3rem;
   }
 
   @media (min-width: 62rem) {
+    padding-bottom: 2rem;
     text-align: center;
     margin-top: 4rem;
   }

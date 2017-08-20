@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
 const AdditionalOffers = styled.section`
-  padding: 0 0.5rem 3rem 0.5rem;
+  padding: 0 0 3rem 0;
 
   @media (min-width: 48rem) {
     display: none;
@@ -13,8 +13,7 @@ const AdditionalOffers = styled.section`
 const Title = styled.h2`
   display: inline-block;
   margin: 0;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #171717;
   border-bottom: 1px solid #171717;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;

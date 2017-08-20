@@ -6,7 +6,7 @@ import ColorBtn from './ColorBtn';
 import Size from './Size';
 
 const MainInfo = styled.div`
-  margin: 1rem 0.5rem 2rem 0.5rem;
+  margin: 1rem 0 2rem 0;
   border-bottom: 1px solid #c6c6c6;
 
   @media (min-width: 48rem) {
