@@ -1,4 +1,18 @@
 language: node_js
 node_js:
-   - "6"
-script: npm run test
+  - "6"
+script:
+  - npm run test
+cache:
+  directories: node_modules
+before_deploy: npm run build
+deploy:
+  - provider: script
+    script: now alias $(now build --token $NOW_TOKEN --public) --token $NOW_TOKEN $URL_DEV
+    skip_cleanup: true
+    on:
+      branch: develop
+  - provider: script
+    script: now alias $(now build --token $NOW_TOKEN --public) --token $NOW_TOKEN $URL_PROD
+    on:
+      branch: master
