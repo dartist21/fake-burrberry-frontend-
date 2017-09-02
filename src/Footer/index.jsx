@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Navigation from './Navigation';
-import CountrySelector from '../Common/CountrySelector';
+import Selector from './Selector';
 
 const Footer = styled.footer`
   padding: 2rem 0;
@@ -24,29 +24,6 @@ const ButtonWrapper = styled.div`
   @media (min-width: 48rem) {
     flex-direction: row;
     margin: 0;
-  }
-`;
-
-const Button = styled.button`
-  display: inline-block;
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0;
-  text-align: left;
-  color: #999999;
-  border: 0;
-  background-color: #f3f3f3;
-  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 1.34;
-
-  span {
-    color: #171717;
-  }
-
-  @media (min-width: 48rem) {
-    margin-right: 1.5rem;
   }
 `;
 
@@ -83,16 +60,16 @@ const Link = styled.a`
 
 const countries = ['United Kingdom (£)', 'Russian Federation (₽)'];
 
+const languages = ['Russian', 'English'];
+
 export default function () {
   return (
     <Footer>
       <div className="container">
         <Navigation />
         <ButtonWrapper>
-          <CountrySelector countries={countries} />
-          <Button type="button" name="language">
-            Language: <span>English</span>
-          </Button>
+          <Selector title="Shipping country" values={countries} />
+          <Selector title="Language" values={languages} />
         </ButtonWrapper>
         <Title>Need help?</Title>
         <Link href="#">Find out more and contact us</Link>
