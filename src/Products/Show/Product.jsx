@@ -136,7 +136,7 @@ export default () =>
               </Large>
             </div>
             <div className="col-xs-12 col-lg-6">
-              <Button color="#ffffff" label="#171717">
+              <Button color="transparent" label="#171717">
                 FIND IN STORE
               </Button>
             </div>
