@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Large } from '../../Common/BreakPoints';
 import ColorBtn from './ColorBtn';
+import SizeBtn from './SizeBtn';
 import Size from './Size';
 
 const Wrapper = styled.div`
@@ -86,10 +87,15 @@ const ColorBtnWrapper = styled.div`
 export default class MainInfo extends Component {
   state = {
     selectedColor: 0,
+    selectedSize: 3,
   };
 
   handleSelectColor = (selectedColor) => {
     this.setState({ selectedColor });
+  };
+
+  handleSelectSize = (selectedSize) => {
+    this.setState({ selectedSize });
   };
 
   render() {
@@ -118,7 +124,16 @@ export default class MainInfo extends Component {
           </div>
           <div className="col-lg-6">
             <Large>
-              <Size />
+              <Size sizes={this.props.sizes} selectedSize={this.state.selectedSize}>
+                {this.props.sizes.map((size, index) =>
+                  (<SizeBtn
+                    key={size}
+                    value={size}
+                    isActive={this.state.selectedSize === index}
+                    onClick={() => this.handleSelectSize(index)}
+                  />),
+                )}
+              </Size>
             </Large>
           </div>
         </div>
@@ -129,4 +144,5 @@ export default class MainInfo extends Component {
 
 MainInfo.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.object).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

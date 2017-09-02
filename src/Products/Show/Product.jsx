@@ -97,6 +97,8 @@ const colors = [
   { name: 'Black', value: '#232122' },
 ];
 
+const sizes = ['S', 'M', 'L', 'XL'];
+
 export default () =>
   (<Product>
     <ToLarge>
@@ -118,7 +120,7 @@ export default () =>
         <Large>
           <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
         </Large>
-        <MainInfo colors={colors} />
+        <MainInfo colors={colors} sizes={sizes} />
         <PropertiesButtons>
           <div className="row">
             <div className="col-xs-12 col-lg-6">
