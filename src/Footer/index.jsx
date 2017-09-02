@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Navigation from './Navigation';
+import CountrySelector from '../Common/CountrySelector';
 
 const Footer = styled.footer`
   padding: 2rem 0;
@@ -80,15 +81,15 @@ const Link = styled.a`
   }
 `;
 
+const countries = ['United Kingdom (£)', 'Russian Federation (₽)'];
+
 export default function () {
   return (
     <Footer>
       <div className="container">
         <Navigation />
         <ButtonWrapper>
-          <Button type="button" name="shipping-country">
-            Shipping country: <span>Russian Federation</span>
-          </Button>
+          <CountrySelector countries={countries} />
           <Button type="button" name="language">
             Language: <span>English</span>
           </Button>
