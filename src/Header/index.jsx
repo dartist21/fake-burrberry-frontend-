@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.svg';
 import Hamburger from './Hamburger';
 import { ToMedium, Medium } from '../Common/BreakPoints';
-import CountrySelector from '../Common/CountrySelector';
+import CountrySelector from './CountrySelector';
 import Menu from './Menu';
 
 const Header = styled.header`

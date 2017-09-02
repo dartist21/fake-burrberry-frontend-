@@ -4,29 +4,27 @@ import styled from 'styled-components';
 import arrow from '../assets/img/arrow.svg';
 
 const CountrySelectorStyled = styled.select`
-  display: block;
-  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+`;
+
+const Img = styled.img`
+  width: 14px;
+  margin-left: 0.5rem;
+`;
+
+const Wrapper = styled.div`
+  display: inline-block;
   position: relative;
-  padding: 0;
-  padding-right: 1.25rem;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1.34;
   color: #999999;
   background: transparent;
-  border: none;
-  appearance: none;
-  &:after {
-    content: "";
-    top: 25%;
-    position: absolute;
-    right: 0;
-    width: 12px;
-    height: 6px;
-    background: url(${arrow}) no-repeat;
-    background-size: contain;
-  }
 `;
 
 class CountrySelector extends Component {
@@ -40,18 +38,34 @@ class CountrySelector extends Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
+        Shopping in:&nbsp;{this.props.countries[this.state.selectedCountry]}
         <CountrySelectorStyled onChange={this.handleSelectCountry}>
           {this.props.countries.map(country =>
             (<option key={country}>
-              Shopping in: {country}
+              {country}
             </option>),
           )}
         </CountrySelectorStyled>
-      </div>
+        <Img src={arrow} alt="" />
+      </Wrapper>
     );
   }
 }
+
+//  <Wrapper>
+//  Shopping in:&nbsp;{locales[this.state.valueIndex]}
+//  <Country value={locales[this.state.valueIndex]} onChange={this.handleChange}>
+//    {locales.map(locale => (
+//      <option
+//        value={locale}
+//      >
+//        {locale}
+//      </option>
+//    ))}
+//  </Country>
+//  <Img src={arrow} alt="" />
+// </Wrapper>
 
 CountrySelector.propTypes = {
   countries: PropTypes.arrayOf(PropTypes.string).isRequired,
