@@ -91,6 +91,12 @@ const Content = styled.p`
   line-height: 1rem;
 `;
 
+const colors = [
+  { name: 'Honey', value: '#cfa880' },
+  { name: 'Beige', value: '#f5f5dc' },
+  { name: 'Black', value: '#232122' },
+];
+
 export default () =>
   (<Product>
     <ToLarge>
@@ -112,7 +118,7 @@ export default () =>
         <Large>
           <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
         </Large>
-        <MainInfo />
+        <MainInfo colors={colors} />
         <PropertiesButtons>
           <div className="row">
             <div className="col-xs-12 col-lg-6">

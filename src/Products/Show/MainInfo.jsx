@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { Large } from '../../Common/BreakPoints';
 import ColorBtn from './ColorBtn';
 import Size from './Size';
 
-const MainInfo = styled.div`
+const Wrapper = styled.div`
   margin: 1rem 0 2rem 0;
   border-bottom: 1px solid #c6c6c6;
 
@@ -82,26 +83,50 @@ const ColorBtnWrapper = styled.div`
   }
 `;
 
-export default () =>
-  (<MainInfo>
-    <PriceAndNumberWrapper>
-      <Price>110 000 руб</Price>
-      <Id>Item 39428531</Id>
-    </PriceAndNumberWrapper>
-    <div className="row">
-      <div className="col-lg-6">
-        <Color>
-          Colour: <span>Honey</span>
-        </Color>
-        <ColorBtnWrapper>
-          <ColorBtn colorValue="#232122" colorName="black" />
-          <ColorBtn colorValue="#cfa880" colorName="fawn" active />
-        </ColorBtnWrapper>
-      </div>
-      <div className="col-lg-6">
-        <Large>
-          <Size />
-        </Large>
-      </div>
-    </div>
-  </MainInfo>);
+export default class MainInfo extends Component {
+  state = {
+    selectedColor: 0,
+  };
+
+  handleSelectColor = (selectedColor) => {
+    this.setState({ selectedColor });
+  };
+
+  render() {
+    return (
+      <Wrapper>
+        <PriceAndNumberWrapper>
+          <Price>110 000 руб</Price>
+          <Id>Item 39428531</Id>
+        </PriceAndNumberWrapper>
+        <div className="row">
+          <div className="col-lg-6">
+            <Color>
+              Colour: <span>{this.props.colors[this.state.selectedColor].name}</span>
+            </Color>
+            <ColorBtnWrapper>
+              {this.props.colors.map((color, index) =>
+                (<ColorBtn
+                  key={color.value}
+                  value={color.value}
+                  name={color.name}
+                  isActive={this.state.selectedColor === index}
+                  onClick={() => this.handleSelectColor(index)}
+                />),
+              )}
+            </ColorBtnWrapper>
+          </div>
+          <div className="col-lg-6">
+            <Large>
+              <Size />
+            </Large>
+          </div>
+        </div>
+      </Wrapper>
+    );
+  }
+}
+
+MainInfo.propTypes = {
+  colors: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

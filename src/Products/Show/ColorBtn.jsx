@@ -13,24 +13,26 @@ const ColorBtnStyled = styled.button`
   border-radius: 50%;
   font-size: 0;
 
-  border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
-  background-color: ${props => props.colorValue};
+  border: ${props => (props.isActive ? 'solid 1px #232122' : 'none')};
+  background-color: ${props => props.value};
 `;
 
 export default function ColorBtn(props) {
   return (
-    <ColorBtnStyled colorValue={props.colorValue} active={props.active} type="button">
-      Choose {props.colorName} color
+    <ColorBtnStyled
+      value={props.value}
+      isActive={props.isActive}
+      onClick={props.onClick}
+      type="button"
+    >
+      Choose {props.name} color
     </ColorBtnStyled>
   );
 }
 
 ColorBtn.propTypes = {
-  colorValue: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
-  colorName: PropTypes.string.isRequired,
-};
-
-ColorBtn.defaultProps = {
-  active: false,
+  value: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
