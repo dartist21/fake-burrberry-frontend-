@@ -53,20 +53,6 @@ class CountrySelector extends Component {
   }
 }
 
-//  <Wrapper>
-//  Shopping in:&nbsp;{locales[this.state.valueIndex]}
-//  <Country value={locales[this.state.valueIndex]} onChange={this.handleChange}>
-//    {locales.map(locale => (
-//      <option
-//        value={locale}
-//      >
-//        {locale}
-//      </option>
-//    ))}
-//  </Country>
-//  <Img src={arrow} alt="" />
-// </Wrapper>
-
 CountrySelector.propTypes = {
   countries: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
