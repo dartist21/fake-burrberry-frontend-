@@ -33,7 +33,6 @@ export default class Filter extends Component {
               <p>content content content content content content content</p>
               <p>content content content content content content content</p>
               <p>content content content content content content content</p>
-              <p>content content content content content content content</p>
             </div>
           </Option>
           <Option name="Colour" isActive={this.state.isActive} toggleActive={this.toggleActive}>
