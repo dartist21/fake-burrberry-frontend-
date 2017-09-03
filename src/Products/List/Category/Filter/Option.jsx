@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
 import arrow from '../../../../assets/img/arrow.svg';
+import Dropdown from './Dropdown';
+
+const Wrapper = styled.div`
+  position: relative;
+  margin-left: ${props => (props.right ? 'auto' : '')};
+`;
 
 const OptionStyled = styled.button`
   flex-shrink: 0;
-  margin: 2rem 1rem 0 0;
-  margin-left: ${props => (props.right ? 'auto' : '')};
-  padding: 0;
+  margin: 1rem .5rem 0 0;
+  padding: 1rem 0;
   border: none;
   font-family: Raleway;
   font-size: 0.75rem;
@@ -30,23 +36,78 @@ const OptionStyled = styled.button`
   @media only screen and (min-width: 48rem) {
     margin-top: 2.5rem;
     margin-right: 3rem;
-    margin-right: ${props => (props.right ? '0' : '')};
+    padding: 1rem .5rem;
   }
+
+  ${props =>
+    props.isActive &&
+    !props.isOpen &&
+    css`
+      opacity: 0.3;
+    `} ${props =>
+  props.isActive &&
+      props.isOpen &&
+      css`
+      color: #171717;
+      &::after {
+        transform: rotate(180deg);
+      }
+  `};
 `;
 
-export default function Option(props) {
-  return (
-    <OptionStyled right={props.right} value={props.value}>
-      {props.value}
-    </OptionStyled>
-  );
+export default class Option extends Component {
+  state = {
+    isOpen: false,
+  };
+
+  handleClick = () => {
+    if (!this.state.isOpen) {
+      this.setState({
+        isOpen: true,
+      });
+
+      this.props.toggleActive();
+    }
+  };
+
+  closeDropdown = () => {
+    this.setState({
+      isOpen: false,
+    });
+
+    this.props.toggleActive();
+  };
+
+  render() {
+    return (
+      <Wrapper right={this.props.right}>
+        <OptionStyled
+          type="button"
+          isActive={this.props.isActive}
+          isOpen={this.state.isOpen}
+          onClick={this.handleClick}
+        >
+          {this.props.name}
+        </OptionStyled>
+
+        {this.state.isOpen &&
+          <Dropdown right={this.props.right} closeDropdown={this.closeDropdown}>
+            {this.props.children}
+          </Dropdown>}
+      </Wrapper>
+    );
+  }
 }
 
 Option.propTypes = {
-  value: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
   right: PropTypes.bool.isRequired,
+  toggleActive: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 Option.defaultProps = {
   right: false,
+  isActive: false,
 };

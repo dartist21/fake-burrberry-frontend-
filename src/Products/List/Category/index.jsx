@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Filter from './Filter';
 
-const Category = styled.div`background-color: #f3f3f3;`;
+const CategoryStyled = styled.div`background-color: #f3f3f3;`;
 
 const Title = styled.h1`
   margin: 0;
@@ -29,19 +30,26 @@ const Description = styled.p`
   color: #171717;
 `;
 
-export default () =>
-  (<Category>
-    <div className="container">
-      <Title>Men’s Clothing</Title>
-      <div className="row">
-        <div className="col-xs-12 col-md-9 col-lg-7">
-          <Description>
-            Explore our menswear collection for the season. Sculptural knitwear, sweatshirts, artist
-            overalls and oversized cabans feature alongside our signature trench coat in both
-            heritage.
-          </Description>
+export default function Category(props) {
+  return (
+    <CategoryStyled>
+      <div className="container">
+        <Title>Men’s Clothing</Title>
+        <div className="row">
+          <div className="col-xs-12 col-md-9 col-lg-7">
+            <Description>
+              Explore our menswear collection for the season. Sculptural knitwear, sweatshirts,
+              artist overalls and oversized cabans feature alongside our signature trench coat in
+              both heritage.
+            </Description>
+          </div>
         </div>
       </div>
-    </div>
-    <Filter />
-  </Category>);
+      <Filter toggleOverlay={props.toggleOverlay} />
+    </CategoryStyled>
+  );
+}
+
+Category.propTypes = {
+  toggleOverlay: PropTypes.func.isRequired,
+};
