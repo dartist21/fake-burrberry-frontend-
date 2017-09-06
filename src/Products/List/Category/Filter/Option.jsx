@@ -44,15 +44,17 @@ const OptionStyled = styled.button`
     !props.isOpen &&
     css`
       opacity: 0.3;
-    `} ${props =>
-  props.isActive &&
-      props.isOpen &&
-      css`
+    `}
+
+  ${props =>
+    props.isActive &&
+    props.isOpen &&
+    css`
       color: #171717;
       &::after {
         transform: rotate(180deg);
       }
-  `};
+    `};
 `;
 
 export default class Option extends Component {
