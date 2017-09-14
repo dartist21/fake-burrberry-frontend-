@@ -41,15 +41,13 @@ const OptionStyled = styled.button`
 
   ${props =>
     props.isActive &&
-    !props.isOpen &&
+    !props.isFilterOpen &&
     css`
       opacity: 0.3;
-    `}
-
-  ${props =>
-    props.isActive &&
-    props.isOpen &&
-    css`
+    `} ${props =>
+  props.isActive &&
+      props.isFilterOpen &&
+      css`
       color: #171717;
       &::after {
         transform: rotate(180deg);
@@ -59,13 +57,13 @@ const OptionStyled = styled.button`
 
 export default class Option extends Component {
   state = {
-    isOpen: false,
+    isFilterOpen: false,
   };
 
   handleClick = () => {
-    if (!this.state.isOpen) {
+    if (!this.state.isFilterOpen) {
       this.setState({
-        isOpen: true,
+        isFilterOpen: true,
       });
 
       this.props.toggleActive();
@@ -74,7 +72,7 @@ export default class Option extends Component {
 
   closeDropdown = () => {
     this.setState({
-      isOpen: false,
+      isFilterOpen: false,
     });
 
     this.props.toggleActive();
@@ -86,13 +84,13 @@ export default class Option extends Component {
         <OptionStyled
           type="button"
           isActive={this.props.isActive}
-          isOpen={this.state.isOpen}
+          isFilterOpen={this.state.isFilterOpen}
           onClick={this.handleClick}
         >
           {this.props.name}
         </OptionStyled>
 
-        {this.state.isOpen &&
+        {this.state.isFilterOpen &&
           <Dropdown right={this.props.right} closeDropdown={this.closeDropdown}>
             {this.props.children}
           </Dropdown>}
