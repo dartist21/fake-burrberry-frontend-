@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Wrapper = styled.div`
   position: absolute;
   top: 100%;
-  left: -1rem;
+  left: -1.5rem;
   padding: 1rem 1.5rem 1.5rem;
   background-color: #f3f3f3;
   z-index: 10;

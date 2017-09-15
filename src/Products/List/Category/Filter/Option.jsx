@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import arrow from '../../../../assets/img/arrow.svg';
 import Dropdown from './Dropdown';
@@ -13,14 +13,15 @@ const Wrapper = styled.div`
 const OptionStyled = styled.button`
   flex-shrink: 0;
   margin: 1rem .5rem 0 0;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border: none;
   font-family: Raleway;
   font-size: 0.75rem;
   line-height: 1.33;
-  color: #171717;
+  color: ${props => (props.isActive && props.isFilterOpen ? '#171717' : '')};
   background-color: #f3f3f3;
   font-weight: 400;
+  opacity: ${props => (props.isActive && !props.isFilterOpen ? '0.3' : '')};
   cursor: pointer;
   &:after {
     content: "";
@@ -31,28 +32,15 @@ const OptionStyled = styled.button`
     background-image: url(${arrow});
     background-size: cover;
     flex-shrink: 0;
+    transform: ${props => (props.isActive && props.isFilterOpen ? 'rotate(180deg)' : '')};
   }
 
   @media only screen and (min-width: 48rem) {
-    margin-top: 2.5rem;
-    margin-right: 3rem;
-    padding: 1rem .5rem;
+    margin-left: ${props => (props.right ? '' : '-0.5rem')};
+    margin-top: 1rem;
+    margin-right: ${props => (props.right ? '-0.5rem' : '2.5rem')};
+    padding: 1.5rem .5rem;
   }
-
-  ${props =>
-    props.isActive &&
-    !props.isFilterOpen &&
-    css`
-      opacity: 0.3;
-    `} ${props =>
-  props.isActive &&
-      props.isFilterOpen &&
-      css`
-      color: #171717;
-      &::after {
-        transform: rotate(180deg);
-      }
-    `};
 `;
 
 export default class Option extends Component {
@@ -82,6 +70,7 @@ export default class Option extends Component {
     return (
       <Wrapper right={this.props.right}>
         <OptionStyled
+          right={this.props.right}
           type="button"
           isActive={this.props.isActive}
           isFilterOpen={this.state.isFilterOpen}
