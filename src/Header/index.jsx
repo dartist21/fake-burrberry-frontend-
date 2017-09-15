@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import logo from '../assets/img/logo.svg';
-import arrow from '../assets/img/arrow.svg';
 import Hamburger from './Hamburger';
 import { ToMedium, Medium } from '../Common/BreakPoints';
+import CountrySelector from './CountrySelector';
 import Menu from './Menu';
 
 const Header = styled.header`
@@ -28,31 +28,6 @@ const Logo = styled.img`
   }
 `;
 
-const Shopping = styled.button`
-  display: block;
-  vertical-align: middle;
-  position: relative;
-  padding: 0;
-  padding-right: 1.25rem;
-  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1.34;
-  color: #999999;
-  background: transparent;
-  border: none;
-  &:after {
-    content: "";
-    top: 25%;
-    position: absolute;
-    right: 0;
-    width: 12px;
-    height: 6px;
-    background: url(${arrow}) no-repeat;
-    background-size: contain;
-  }
-`;
-
 const Navigation = styled.nav`
   text-align: center;
   margin-top: 1.5rem;
@@ -61,6 +36,8 @@ const Navigation = styled.nav`
     margin-top: 2rem;
   }
 `;
+
+const countries = ['United Kingdom (£)', 'Russian Federation (₽)'];
 
 export default function () {
   return (
@@ -74,7 +51,7 @@ export default function () {
                   <Hamburger />
                 </ToMedium>
                 <Medium>
-                  <Shopping>Shopping in: United Kingdom (£)</Shopping>
+                  <CountrySelector countries={countries} />
                 </Medium>
               </div>
               <div className="col-xs-8 col-md-4">

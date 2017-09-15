@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedPlural } from 'react-intl';
 
 import FormattedPrice from '../Common/FormattedPrice';
-import like from '../assets/img/like.svg';
+import Heart from '../Common/Heart';
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -35,9 +35,13 @@ const Label = styled.p`
   margin-bottom: 0.5rem;
 `;
 
-const Like = styled.img`
+const Like = styled.button`
   width: 14px;
   height: 14px;
+  padding: 0;
+  border: none;
+  background: Transparent;
+  cursor: pointer;
 `;
 
 const Title = styled.h2`
@@ -72,37 +76,51 @@ const Price = styled.h5`
   font-size: 0.75rem;
 `;
 
-export default function ProductCard(props) {
-  return (
-    <Card>
-      <StyledLink to={props.to}>
-        <Img src={props.image} alt={props.title} />
-      </StyledLink>
-      <Wrapper>
-        <Info>
-          <Label>
-            {props.label}
-          </Label>
-          <StyledLink to={props.to}>
-            <Title>
-              {props.title}
-            </Title>
-          </StyledLink>
-          <Colors>
-            Available in&nbsp;
-            <Button type="button">
-              {props.colorsNumber}
-              <FormattedPlural value={props.colorsNumber} one=" colour" other=" colours" />
-            </Button>
-          </Colors>
-          <Price>
-            <FormattedPrice price={props.price} currency="RUB" />
-          </Price>
-        </Info>
-        <Like src={like} alt="Add this product to favourite" />
-      </Wrapper>
-    </Card>
-  );
+export default class ProductCard extends Component {
+  state = {
+    isLiked: false,
+  };
+
+  handleLike = () => {
+    this.setState(prevState => ({
+      isLiked: !prevState.isLiked,
+    }));
+  };
+
+  render() {
+    return (
+      <Card>
+        <StyledLink to={this.props.to}>
+          <Img src={this.props.image} alt={this.props.title} />
+        </StyledLink>
+        <Wrapper>
+          <Info>
+            <Label>
+              {this.props.label}
+            </Label>
+            <StyledLink to={this.props.to}>
+              <Title>
+                {this.props.title}
+              </Title>
+            </StyledLink>
+            <Colors>
+              Available in&nbsp;
+              <Button type="button">
+                {this.props.colorsNumber}
+                <FormattedPlural value={this.props.colorsNumber} one=" colour" other=" colours" />
+              </Button>
+            </Colors>
+            <Price>
+              <FormattedPrice price={this.props.price} currency="RUB" />
+            </Price>
+          </Info>
+          <Like onClick={this.handleLike}>
+            <Heart fill={this.state.isLiked ? '#171717' : 'none'} />
+          </Like>
+        </Wrapper>
+      </Card>
+    );
+  }
 }
 
 ProductCard.propTypes = {
