@@ -15,25 +15,27 @@ const ColorBtnStyled = styled.button`
   cursor: pointer;
 
   border: ${props => (props.isActive ? 'solid 1px #232122' : 'none')};
-  background-color: ${props => props.value};
+  background-color: ${props => props.color};
 `;
 
 export default function ColorBtn(props) {
   return (
     <ColorBtnStyled
       value={props.value}
+      color={props.color}
       isActive={props.isActive}
       onClick={props.onClick}
       type="button"
+      name="color"
     >
-      Choose {props.name} color
+      Choose {props.color} color
     </ColorBtnStyled>
   );
 }
 
 ColorBtn.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
   isActive: PropTypes.bool.isRequired,
-  name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };

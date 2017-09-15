@@ -22,14 +22,21 @@ const SizeBtnStyled = styled.button`
 
 export default function SizeBtn(props) {
   return (
-    <SizeBtnStyled isActive={props.isActive} onClick={props.onClick} type="button">
-      {props.value}
+    <SizeBtnStyled
+      value={props.value}
+      isActive={props.isActive}
+      onClick={props.onClick}
+      type="button"
+      name="size"
+    >
+      {props.size}
     </SizeBtnStyled>
   );
 }
 
 SizeBtn.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
   isActive: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };

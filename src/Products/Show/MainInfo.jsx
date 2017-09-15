@@ -86,16 +86,15 @@ const ColorBtnWrapper = styled.div`
 
 export default class MainInfo extends Component {
   state = {
-    selectedColor: 0,
-    selectedSize: 3,
+    color: 1,
+    size: 3,
   };
 
-  handleSelectColor = (selectedColor) => {
-    this.setState({ selectedColor });
-  };
+  handleOptionChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
 
-  handleSelectSize = (selectedSize) => {
-    this.setState({ selectedSize });
+    this.setState({ [name]: +value });
   };
 
   render() {
@@ -108,29 +107,30 @@ export default class MainInfo extends Component {
         <div className="row">
           <div className="col-lg-6">
             <Color>
-              Colour: <span>{this.props.colors[this.state.selectedColor].name}</span>
+              Colour: <span>{this.props.colors[this.state.color].name}</span>
             </Color>
             <ColorBtnWrapper>
               {this.props.colors.map((color, index) =>
                 (<ColorBtn
                   key={color.value}
-                  value={color.value}
-                  name={color.name}
-                  isActive={this.state.selectedColor === index}
-                  onClick={() => this.handleSelectColor(index)}
+                  value={index}
+                  color={color.value}
+                  isActive={this.state.color === index}
+                  onClick={this.handleOptionChange}
                 />),
               )}
             </ColorBtnWrapper>
           </div>
           <div className="col-lg-6">
             <Large>
-              <Size sizes={this.props.sizes} selectedSize={this.state.selectedSize}>
+              <Size sizes={this.props.sizes} selectedSize={this.state.size}>
                 {this.props.sizes.map((size, index) =>
                   (<SizeBtn
                     key={size}
-                    value={size}
-                    isActive={this.state.selectedSize === index}
-                    onClick={() => this.handleSelectSize(index)}
+                    size={size}
+                    value={index}
+                    isActive={this.state.size === index}
+                    onClick={this.handleOptionChange}
                   />),
                 )}
               </Size>
