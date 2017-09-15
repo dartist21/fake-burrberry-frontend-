@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
+import { get } from '../../data';
 
 import Product from './Product';
 import ReadMoreAccordion from './ReadMoreAccordion';
@@ -39,87 +41,127 @@ const Image = styled.img`
   min-width: 100%;
 `;
 
-export default function () {
-  return (
-    <div>
-      <Helmet>
-        <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
-        <meta
-          name="description"
-          content="Explore men's trench coats from Burberry, with our Heritage
+export default class Show extends Component {
+  state = {
+    title: '',
+    multiCurrencyPrices: 0,
+    colours: [],
+    sizes: [],
+  };
+
+  componentDidMount() {
+    const url = `/v1/products/${this.props.match.params.category}/${this.props.match.params
+      .section}/${this.props.match.params.id}/`;
+
+    get(url).then((data) => {
+      this.setState({
+        title: data.title,
+        multiCurrencyPrices: data.multiCurrencyPrices,
+        colours: data.colours,
+        sizes: data.sizes,
+      });
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <Helmet>
+          <title>
+            {this.state.title}
+          </title>
+          <meta
+            name="description"
+            content="Explore men's trench coats from Burberry, with our Heritage
                 Trench Coat in several fits as well as double and
                 single-breasted styles in many materials."
-        />
-      </Helmet>
-      <Section>
-        <div className="container">
-          <Product />
-        </div>
-      </Section>
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-lg-4">
-            <ReadMoreAccordion title="Description" active>
-              <p>A refined car coat crafted in protective cotton gabardine.</p>
-              <p>
-                Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and
-                breathable fabric that protects against wind and rain.
-              </p>
-              <p>
-                Raglan sleeves and a concealed button closure complement the clean tailored lines.
-              </p>
-              <p>The piece is finished with a distinctive check undercollar.</p>
-              <ul>
-                <li>
-                  Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
-                  slightly according to size.
-                </li>
-                <li>Outer: 100% cotton</li>
-                <li>Check lining: 100% cotton</li>
-                <li>Sleeve lining: 100% viscose</li>
-                <li>Buttons: buffalo horn</li>
-                <li>Specialist dry clean</li>
-                <li>Made in Europe</li>
-                <li>Item 39428531</li>
-              </ul>
-            </ReadMoreAccordion>
-          </div>
-          <div className="col-lg-8">
-            <DescriptionImage
-              src={`${process.env.PUBLIC_URL}/img/img7.jpg`}
-              alt="Long Cotton Gabardine Car Coat Detail"
+          />
+        </Helmet>
+        <Section>
+          <div className="container">
+            <Product
+              colours={this.state.colours}
+              sizes={this.state.sizes}
+              multiCurrencyPrices={this.state.multiCurrencyPrices}
+              title={this.state.title}
             />
           </div>
-        </div>
-        <MorePhotos>
+        </Section>
+        <div className="container">
           <div className="row">
-            <div className="col-lg-4">
-              <Image
-                first
-                src={`${process.env.PUBLIC_URL}/img/img8.jpg`}
-                alt="Long Cotton Gabardine Car Coat Detail"
-              />
+            <div className="col-xs-12 col-lg-4">
+              <ReadMoreAccordion title="Description" active>
+                <p>A refined car coat crafted in protective cotton gabardine.</p>
+                <p>
+                  Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and
+                  breathable fabric that protects against wind and rain.
+                </p>
+                <p>
+                  Raglan sleeves and a concealed button closure complement the clean tailored lines.
+                </p>
+                <p>The piece is finished with a distinctive check undercollar.</p>
+                <ul>
+                  <li>
+                    Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
+                    slightly according to size.
+                  </li>
+                  <li>Outer: 100% cotton</li>
+                  <li>Check lining: 100% cotton</li>
+                  <li>Sleeve lining: 100% viscose</li>
+                  <li>Buttons: buffalo horn</li>
+                  <li>Specialist dry clean</li>
+                  <li>Made in Europe</li>
+                  <li>Item 39428531</li>
+                </ul>
+              </ReadMoreAccordion>
             </div>
-            <div className="col-lg-4">
-              <Image
-                second
-                src={`${process.env.PUBLIC_URL}/img/img9.jpg`}
-                alt="Long Cotton Gabardine Car Coat Detail"
-              />
-            </div>
-            <div className="col-lg-4">
-              <Image
-                src={`${process.env.PUBLIC_URL}/img/img10.jpg`}
+            <div className="col-lg-8">
+              <DescriptionImage
+                src={`${process.env.PUBLIC_URL}/img/img7.jpg`}
                 alt="Long Cotton Gabardine Car Coat Detail"
               />
             </div>
           </div>
-        </MorePhotos>
-        <ReadMoreAccordion title="SHIPPING & RETURNS" mobile />
-        <Delivery />
-        <Recomendations />
-        <AdditionalOffers />
+          <MorePhotos>
+            <div className="row">
+              <div className="col-lg-4">
+                <Image
+                  first
+                  src={`${process.env.PUBLIC_URL}/img/img8.jpg`}
+                  alt="Long Cotton Gabardine Car Coat Detail"
+                />
+              </div>
+              <div className="col-lg-4">
+                <Image
+                  second
+                  src={`${process.env.PUBLIC_URL}/img/img9.jpg`}
+                  alt="Long Cotton Gabardine Car Coat Detail"
+                />
+              </div>
+              <div className="col-lg-4">
+                <Image
+                  src={`${process.env.PUBLIC_URL}/img/img10.jpg`}
+                  alt="Long Cotton Gabardine Car Coat Detail"
+                />
+              </div>
+            </div>
+          </MorePhotos>
+          <ReadMoreAccordion title="SHIPPING & RETURNS" mobile />
+          <Delivery />
+          <Recomendations />
+          <AdditionalOffers />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+Show.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      category: PropTypes.string,
+      section: PropTypes.string,
+      id: PropTypes.string,
+    }),
+  }).isRequired,
+};

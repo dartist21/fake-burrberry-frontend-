@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const SizeBtnStyled = styled.button`
   display: inline-block;
   margin: 0;
-  margin-right: .5rem;
+  margin: 0 .5rem .5rem 0;
   padding: .5rem 1rem;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;

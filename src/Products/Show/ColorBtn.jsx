@@ -15,7 +15,7 @@ const ColorBtnStyled = styled.button`
   cursor: pointer;
 
   border: ${props => (props.isActive ? 'solid 1px #232122' : 'none')};
-  background-color: ${props => props.color};
+  background-image: url(${props => props.color});
 `;
 
 export default function ColorBtn(props) {
