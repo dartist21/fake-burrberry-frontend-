@@ -131,3 +131,7 @@ ProductCard.propTypes = {
   price: PropTypes.number.isRequired,
   to: PropTypes.string.isRequired,
 };
+
+ProductCard.defaultProps = {
+  label: '',
+};
