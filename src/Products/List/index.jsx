@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { get } from '../../data';
 
@@ -78,7 +79,8 @@ export default class List extends Component {
   };
 
   componentDidMount() {
-    const url = '/v1/products/men/suits';
+    const url = `/v1/products/${this.props.match.params.category}/${this.props.match.params
+      .section}`;
 
     get(url).then((data) => {
       this.setState({
@@ -121,7 +123,8 @@ export default class List extends Component {
                 (<div className="col-xs-6 col-md-3" key={product.id}>
                   <Card
                     id={product.id}
-                    to={`/men/clothes/${product.slug}`}
+                    to={`/${this.props.match.params.category}/${this.props.match.params
+                      .section}/${product.slug}`}
                     image={`${product.images[0]}?$BBY_V2_ML_3X4$&wid=300&hei=400`}
                     title={product.title}
                     label={product.label}
@@ -140,3 +143,12 @@ export default class List extends Component {
     );
   }
 }
+
+List.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      category: PropTypes.string,
+      section: PropTypes.string,
+    }),
+  }).isRequired,
+};
