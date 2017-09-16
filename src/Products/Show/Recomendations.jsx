@@ -41,7 +41,7 @@ export default function Recomendations(props) {
     <StyledRecomendations>
       <Title>WE RECOMMEND</Title>
       <div className="row">
-        {props.linkedProducts.length &&
+        {props.linkedProducts.length > 0 &&
           props.linkedProducts.map(linkedProduct =>
             (<div className="col-xs-6 col-md-3" key={linkedProduct.id}>
               <Card

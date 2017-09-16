@@ -115,7 +115,7 @@ export default class MainInfo extends Component {
         </PriceAndNumberWrapper>
         <div className="row">
           <div className="col-lg-6">
-            {Boolean(this.props.colors.length) &&
+            {this.props.colors.length > 0 &&
               <Color>
                 Colour: <span>{this.props.colors[this.state.color].value}</span>
               </Color>}
@@ -134,7 +134,7 @@ export default class MainInfo extends Component {
           </div>
           <div className="col-lg-6">
             <Large>
-              {Boolean(this.props.sizes.length) &&
+              {this.props.sizes.length > 0 &&
                 <Size sizes={this.props.sizes} selectedSize={this.state.size}>
                   {this.props.sizes &&
                     this.props.sizes.map((size, index) =>
