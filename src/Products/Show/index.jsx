@@ -120,7 +120,7 @@ export default class Show extends Component {
             </div>
             <div className="col-lg-8">
               <DescriptionImage
-                src={`${this.state.images[1]}?$BBY_V2_ML_3X4$`}
+                src={`${this.state.images[1]}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
                 alt={this.state.title}
               />
             </div>
