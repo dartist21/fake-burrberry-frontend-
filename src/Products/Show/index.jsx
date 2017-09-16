@@ -51,11 +51,15 @@ export default class Show extends Component {
     description: '',
     details: '',
     images: [],
+    linkedProducts: [],
   };
 
   componentDidMount() {
     const url = `/v1/products/${this.props.match.params.category}/${this.props.match.params
       .section}/${this.props.match.params.id}/`;
+
+    const recommendUrl = `/v1/products/${this.props.match.params.category}/${this.props.match.params
+      .section}/`;
 
     get(url).then((data) => {
       this.setState({
@@ -67,6 +71,12 @@ export default class Show extends Component {
         description: data.description,
         details: data.details,
         images: data.images,
+      });
+    });
+
+    get(recommendUrl).then((data) => {
+      this.setState({
+        linkedProducts: data.items.slice(0, 4),
       });
     });
   }
@@ -138,7 +148,7 @@ export default class Show extends Component {
           </MorePhotos>
           <ReadMoreAccordion title="SHIPPING & RETURNS" mobile />
           <Delivery />
-          <Recomendations />
+          <Recomendations linkedProducts={this.state.linkedProducts} match={this.props.match} />
           <AdditionalOffers />
         </div>
       </div>
