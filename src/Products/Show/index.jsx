@@ -10,7 +10,7 @@ import Delivery from './Delivery';
 import Recomendations from './Recomendations';
 import AdditionalOffers from './AdditionalOffers';
 
-const Section = styled.section`@media screen and (min-width: 62rem) {background: #d4bdad;}`;
+const Section = styled.section`@media screen and (min-width: 62rem) {background: #ffffff;}`;
 
 const DescriptionImage = styled.img`
   display: none;
@@ -50,6 +50,7 @@ export default class Show extends Component {
     id: '',
     description: '',
     details: '',
+    images: [],
   };
 
   componentDidMount() {
@@ -57,7 +58,6 @@ export default class Show extends Component {
       .section}/${this.props.match.params.id}/`;
 
     get(url).then((data) => {
-      console.log(data);
       this.setState({
         title: data.title,
         multiCurrencyPrices: data.multiCurrencyPrices,
@@ -66,6 +66,7 @@ export default class Show extends Component {
         id: data.id,
         description: data.description,
         details: data.details,
+        images: data.images,
       });
     });
   }
@@ -92,6 +93,7 @@ export default class Show extends Component {
               multiCurrencyPrices={this.state.multiCurrencyPrices}
               title={this.state.title}
               id={this.state.id}
+              images={this.state.images}
             />
           </div>
         </Section>
@@ -108,8 +110,8 @@ export default class Show extends Component {
             </div>
             <div className="col-lg-8">
               <DescriptionImage
-                src={`${process.env.PUBLIC_URL}/img/img7.jpg`}
-                alt="Long Cotton Gabardine Car Coat Detail"
+                src={`${this.state.images[1]}?$BBY_V2_ML_3X4$`}
+                alt={this.state.title}
               />
             </div>
           </div>
@@ -118,22 +120,19 @@ export default class Show extends Component {
               <div className="col-lg-4">
                 <Image
                   first
-                  src={`${process.env.PUBLIC_URL}/img/img8.jpg`}
-                  alt="Long Cotton Gabardine Car Coat Detail"
+                  src={`${this.state.images[2]}?$BBY_V2_ML_3X4$`}
+                  alt={this.state.title}
                 />
               </div>
               <div className="col-lg-4">
                 <Image
                   second
-                  src={`${process.env.PUBLIC_URL}/img/img9.jpg`}
-                  alt="Long Cotton Gabardine Car Coat Detail"
+                  src={`${this.state.images[3]}?$BBY_V2_ML_3X4$`}
+                  alt={this.state.title}
                 />
               </div>
               <div className="col-lg-4">
-                <Image
-                  src={`${process.env.PUBLIC_URL}/img/img10.jpg`}
-                  alt="Long Cotton Gabardine Car Coat Detail"
-                />
+                <Image src={`${this.state.images[4]}?$BBY_V2_ML_3X4$`} alt={this.state.title} />
               </div>
             </div>
           </MorePhotos>

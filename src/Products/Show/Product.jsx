@@ -106,10 +106,7 @@ export default function Product(props) {
             <Gallery />
           </ToLarge>
           <Large>
-            <Image
-              src={`${process.env.PUBLIC_URL}/img/img1.jpg`}
-              alt="Long Cotton Gabardine Car Coat"
-            />
+            <Image src={`${props.images[0]}?$BBY_V2_ML_3X4$`} alt={props.title} />
           </Large>
         </div>
         <div className="col-xs-12 col-md-5 col-lg-6">
@@ -162,6 +159,7 @@ Product.propTypes = {
   title: PropTypes.string.isRequired,
   colours: PropTypes.arrayOf(PropTypes.object).isRequired,
   sizes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
   multiCurrencyPrices: PropTypes.objectOf(PropTypes.string).isRequired,
   id: PropTypes.string.isRequired,
 };
