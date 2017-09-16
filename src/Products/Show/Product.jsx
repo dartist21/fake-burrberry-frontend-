@@ -103,7 +103,7 @@ export default function Product(props) {
       <div className="row middle-lg">
         <div className="col-xs-12 col-md-7 col-lg-6">
           <ToLarge>
-            <Gallery />
+            <Gallery images={props.images} title={props.title} />
           </ToLarge>
           <Large>
             <Image src={`${props.images[0]}?$BBY_V2_ML_3X4$&wid=600&hei=800`} alt={props.title} />
