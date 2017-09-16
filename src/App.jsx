@@ -20,7 +20,7 @@ export default function () {
             <Redirect exact from="/" to="/men/suits" />
             <Route exact path="/:category" component={List} />
             <Route exact path="/:category/:section" component={List} />
-            <Route exact path="/:category/:section/:id" component={Show} />
+            <Route exact path="/:category/:section/:slug" component={Show} />
           </Switch>
           <Footer />
         </div>

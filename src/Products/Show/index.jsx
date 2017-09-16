@@ -56,7 +56,7 @@ export default class Show extends Component {
 
   componentDidMount() {
     const url = `/v1/products/${this.props.match.params.category}/${this.props.match.params
-      .section}/${this.props.match.params.id}/`;
+      .section}/${this.props.match.params.slug}/`;
 
     const recommendUrl = `/v1/products/${this.props.match.params.category}/${this.props.match.params
       .section}/`;
@@ -161,7 +161,7 @@ Show.propTypes = {
     params: PropTypes.shape({
       category: PropTypes.string,
       section: PropTypes.string,
-      id: PropTypes.string,
+      slug: PropTypes.string,
       description: PropTypes.string,
       details: PropTypes.string,
     }),
