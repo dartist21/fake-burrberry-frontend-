@@ -108,7 +108,9 @@ export default class MainInfo extends Component {
               currency="RUB"
             />
           </Price>
-          <Id>Item 39428531</Id>
+          <Id>
+            Item {this.props.id}
+          </Id>
         </PriceAndNumberWrapper>
         <div className="row">
           <div className="col-lg-6">
@@ -153,4 +155,5 @@ MainInfo.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.object).isRequired,
   sizes: PropTypes.arrayOf(PropTypes.object).isRequired,
   multiCurrencyPrices: PropTypes.objectOf(PropTypes.string).isRequired,
+  id: PropTypes.string.isRequired,
 };

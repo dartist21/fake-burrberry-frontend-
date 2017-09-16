@@ -122,6 +122,7 @@ export default function Product(props) {
             multiCurrencyPrices={props.multiCurrencyPrices}
             colors={props.colours}
             sizes={props.sizes}
+            id={props.id}
           />
           <PropertiesButtons>
             <div className="row">
@@ -162,4 +163,5 @@ Product.propTypes = {
   colours: PropTypes.arrayOf(PropTypes.object).isRequired,
   sizes: PropTypes.arrayOf(PropTypes.object).isRequired,
   multiCurrencyPrices: PropTypes.objectOf(PropTypes.string).isRequired,
+  id: PropTypes.string.isRequired,
 };

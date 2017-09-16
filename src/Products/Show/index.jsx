@@ -44,9 +44,10 @@ const Image = styled.img`
 export default class Show extends Component {
   state = {
     title: '',
-    multiCurrencyPrices: 0,
+    multiCurrencyPrices: {},
     colours: [],
     sizes: [],
+    id: '',
   };
 
   componentDidMount() {
@@ -59,6 +60,7 @@ export default class Show extends Component {
         multiCurrencyPrices: data.multiCurrencyPrices,
         colours: data.colours,
         sizes: data.sizes,
+        id: data.id,
       });
     });
   }
@@ -84,6 +86,7 @@ export default class Show extends Component {
               sizes={this.state.sizes}
               multiCurrencyPrices={this.state.multiCurrencyPrices}
               title={this.state.title}
+              id={this.state.id}
             />
           </div>
         </Section>
