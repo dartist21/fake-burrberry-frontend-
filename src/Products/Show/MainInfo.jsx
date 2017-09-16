@@ -103,10 +103,11 @@ export default class MainInfo extends Component {
       <Wrapper>
         <PriceAndNumberWrapper>
           <Price>
-            <FormattedPrice
-              price={Number(this.props.multiCurrencyPrices.RUB) / 100}
-              currency="RUB"
-            />
+            {this.props.multiCurrencyPrices.RUB &&
+              <FormattedPrice
+                price={Number(this.props.multiCurrencyPrices.RUB) / 100}
+                currency="RUB"
+              />}
           </Price>
           <Id>
             Item {this.props.id}
@@ -114,35 +115,38 @@ export default class MainInfo extends Component {
         </PriceAndNumberWrapper>
         <div className="row">
           <div className="col-lg-6">
-            {this.props.colors.length &&
+            {Boolean(this.props.colors.length) &&
               <Color>
                 Colour: <span>{this.props.colors[this.state.color].value}</span>
               </Color>}
             <ColorBtnWrapper>
-              {this.props.colors.map((color, index) =>
-                (<ColorBtn
-                  key={color.value}
-                  value={index}
-                  color={color.src}
-                  isActive={this.state.color === index}
-                  onClick={this.handleOptionChange}
-                />),
-              )}
+              {this.props.colors &&
+                this.props.colors.map((color, index) =>
+                  (<ColorBtn
+                    key={color.value}
+                    value={index}
+                    color={color.src}
+                    isActive={this.state.color === index}
+                    onClick={this.handleOptionChange}
+                  />),
+                )}
             </ColorBtnWrapper>
           </div>
           <div className="col-lg-6">
             <Large>
-              <Size sizes={this.props.sizes} selectedSize={this.state.size}>
-                {this.props.sizes.map((size, index) =>
-                  (<SizeBtn
-                    key={size.id}
-                    size={size.title}
-                    value={index}
-                    isActive={this.state.size === index}
-                    onClick={this.handleOptionChange}
-                  />),
-                )}
-              </Size>
+              {Boolean(this.props.sizes.length) &&
+                <Size sizes={this.props.sizes} selectedSize={this.state.size}>
+                  {this.props.sizes &&
+                    this.props.sizes.map((size, index) =>
+                      (<SizeBtn
+                        key={size.id}
+                        size={size.title}
+                        value={index}
+                        isActive={this.state.size === index}
+                        onClick={this.handleOptionChange}
+                      />),
+                    )}
+                </Size>}
             </Large>
           </div>
         </div>
