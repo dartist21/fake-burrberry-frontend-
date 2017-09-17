@@ -34,13 +34,13 @@ export default function Category(props) {
   return (
     <CategoryStyled>
       <div className="container">
-        <Title>Men’s Clothing</Title>
+        <Title>
+          {props.title}
+        </Title>
         <div className="row">
           <div className="col-xs-12 col-md-9 col-lg-7">
             <Description>
-              Explore our menswear collection for the season. Sculptural knitwear, sweatshirts,
-              artist overalls and oversized cabans feature alongside our signature trench coat in
-              both heritage.
+              {props.description}
             </Description>
           </div>
         </div>
@@ -52,4 +52,11 @@ export default function Category(props) {
 
 Category.propTypes = {
   toggleOverlay: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
+Category.defaultProps = {
+  title: '',
+  description: '',
 };

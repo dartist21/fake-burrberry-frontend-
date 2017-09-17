@@ -48,9 +48,11 @@ export default function Size(props) {
   return (
     <SizeStyled>
       <Header>
-        <SelectedSize>
-          Size: <Selection>{props.sizes[props.selectedSize]}</Selection>
-        </SelectedSize>
+        {props.sizes.length && (
+          <SelectedSize>
+            Size: <Selection>{props.sizes[props.selectedSize].title}</Selection>
+          </SelectedSize>
+        )}
         <Help>Need size help?</Help>
       </Header>
       <Options>
@@ -61,7 +63,7 @@ export default function Size(props) {
 }
 
 Size.propTypes = {
-  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.object).isRequired,
   selectedSize: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired,
 };

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const Gallery = styled.div`
+const StyledGallery = styled.div`
   position: relative;
   right: 50%;
   left: 50%;
@@ -33,10 +34,46 @@ const Image = styled.img`
   }
 `;
 
-export default () =>
-  (<Gallery>
-    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
-    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
-    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
-    <Image src={`${process.env.PUBLIC_URL}/img/img1.jpg`} alt="Long Cotton Gabardine Car Coat" />
-  </Gallery>);
+export default function Gallery(props) {
+  return (
+    <StyledGallery>
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[0].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[1].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[2].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[3].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
+    </StyledGallery>
+  );
+}
+
+Gallery.propTypes = {
+  title: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired
+};

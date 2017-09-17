@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Card from '../Card';
 
-const Recomendations = styled.section`
+const StyledRecomendations = styled.section`
   padding: 0 0.5rem 1rem 0;
 
   @media (min-width: 48rem) {
@@ -35,49 +36,39 @@ const Title = styled.h2`
   }
 `;
 
-export default () =>
-  (<Recomendations>
-    <Title>WE RECOMMEND</Title>
-    <div className="row">
-      <div className="col-xs-6 col-md-3">
-        <Card
-          image="https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&hei=720&wid=540"
-          title="The Westminster – Long Heritage Trench Coat"
-          label="Relaxed fit"
-          colorsNumber={3}
-          price={120000}
-          to="/mens-clothing/long-cotton-gabardine-car-coat"
-        />
+export default function Recomendations(props) {
+  return (
+    <StyledRecomendations>
+      <Title>WE RECOMMEND</Title>
+      <div className="row">
+        {props.linkedProducts.length > 0 &&
+          props.linkedProducts.map(linkedProduct =>
+            (<div className="col-xs-6 col-md-3" key={linkedProduct.id}>
+              <Card
+                image={`${linkedProduct.images[0].replace(
+                  'https:',
+                  '',
+                )}?$BBY_V2_ML_3X4$&hei=720&wid=540`}
+                title={linkedProduct.title}
+                // label="Relaxed fit"
+                colorsNumber={linkedProduct.colours.length}
+                price={Number(linkedProduct.multiCurrencyPrices.RUB) / 100}
+                to={`/${props.match.params.category}/${props.match.params
+                  .section}/${linkedProduct.slug}`}
+              />
+            </div>),
+          )}
       </div>
-      <div className="col-xs-6 col-md-3">
-        <Card
-          image="https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&hei=720&wid=540"
-          title="The Westminster – Long Heritage Trench Coat"
-          label="Relaxed fit"
-          colorsNumber={3}
-          price={120000}
-          to="/mens-clothing/long-cotton-gabardine-car-coat"
-        />
-      </div>
-      <div className="col-xs-6 col-md-3">
-        <Card
-          image="https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&hei=720&wid=540"
-          title="The Westminster – Long Heritage Trench Coat"
-          label="Relaxed fit"
-          colorsNumber={3}
-          price={120000}
-          to="/mens-clothing/long-cotton-gabardine-car-coat"
-        />
-      </div>
-      <div className="col-xs-6 col-md-3">
-        <Card
-          image="https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&hei=720&wid=540"
-          title="The Westminster – Long Heritage Trench Coat"
-          label="Relaxed fit"
-          colorsNumber={3}
-          price={120000}
-          to="/mens-clothing/long-cotton-gabardine-car-coat"
-        />
-      </div>
-    </div>
-  </Recomendations>);
+    </StyledRecomendations>
+  );
+}
+
+Recomendations.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      category: PropTypes.string,
+      section: PropTypes.string,
+    }),
+  }).isRequired,
+  linkedProducts: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
 
@@ -16,9 +16,12 @@ export default function () {
       <Router>
         <div>
           <Header />
-          <Route exact path="/" component={List} />
-          <Route exact path="/mens-clothing" component={List} />
-          <Route path="/mens-clothing/:id" component={Show} />
+          <Switch>
+            <Redirect exact from="/" to="/men/suits" />
+            <Route exact path="/:category" component={List} />
+            <Route exact path="/:category/:section" component={List} />
+            <Route exact path="/:category/:section/:slug" component={Show} />
+          </Switch>
           <Footer />
         </div>
       </Router>

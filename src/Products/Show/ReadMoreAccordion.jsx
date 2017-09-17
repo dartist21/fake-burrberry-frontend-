@@ -19,7 +19,7 @@ const ReadMoreAccordionStyled = styled.section`
   }
 
   ul {
-    margin: 1.5rem 0 2rem 0;
+    margin: 1.5rem 0;
     padding: 0;
   }
 
@@ -34,11 +34,15 @@ const ReadMoreAccordionStyled = styled.section`
     line-height: 1.715;
   }
 
+  div {
+    margin-bottom: 2rem;
+  }
+
   @media (min-width: 48rem) {
     padding: 0 1rem 1.5rem 0;
     border-bottom: 0;
 
-    ul {
+    div {
       margin-bottom: 1.5rem;
     }
 

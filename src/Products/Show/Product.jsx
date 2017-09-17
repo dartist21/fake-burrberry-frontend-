@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { ToLarge, Large } from '../../Common/BreakPoints';
 import MainInfo from './MainInfo';
 import Button from './Button';
 import Gallery from './Gallery';
 
-const Product = styled.section`
+const StyledProduct = styled.section`
   padding-bottom: 2.5rem;
   border-bottom: 1px solid #c6c6c6;
 
@@ -91,64 +92,83 @@ const Content = styled.p`
   line-height: 1rem;
 `;
 
-const colors = [
-  { name: 'Honey', value: '#cfa880' },
-  { name: 'Beige', value: '#f5f5dc' },
-  { name: 'Black', value: '#232122' },
-];
-
-const sizes = ['S', 'M', 'L', 'XL'];
-
-export default () =>
-  (<Product>
-    <ToLarge>
-      <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-    </ToLarge>
-    <div className="row middle-lg">
-      <div className="col-xs-12 col-md-7 col-lg-6">
-        <ToLarge>
-          <Gallery />
-        </ToLarge>
-        <Large>
-          <Image
-            src={`${process.env.PUBLIC_URL}/img/img1.jpg`}
-            alt="Long Cotton Gabardine Car Coat"
-          />
-        </Large>
-      </div>
-      <div className="col-xs-12 col-md-5 col-lg-6">
-        <Large>
-          <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-        </Large>
-        <MainInfo colors={colors} sizes={sizes} />
-        <PropertiesButtons>
-          <div className="row">
-            <div className="col-xs-12 col-lg-6">
-              <ToLarge>
-                <Button color="#171717" label="#ffffff">
-                  SELECT A SIZE
-                </Button>
-              </ToLarge>
-              <Large>
-                <Button color="#171717" label="#ffffff">
-                  ADD TO BAG
-                </Button>
-              </Large>
-            </div>
-            <div className="col-xs-12 col-lg-6">
-              <Button color="transparent" label="#171717">
-                FIND IN STORE
-              </Button>
-            </div>
-          </div>
+export default function Product(props) {
+  return (
+    <StyledProduct>
+      <ToLarge>
+        <Title>
+          {props.title}
+        </Title>
+      </ToLarge>
+      <div className="row middle-lg">
+        <div className="col-xs-12 col-md-7 col-lg-6">
           <ToLarge>
-            <HelpButton type="button">NEED SIZE HELP?</HelpButton>
+            <Gallery images={props.images} title={props.title} />
           </ToLarge>
-        </PropertiesButtons>
-        <Delivery>
-          <Subtitle>Free Next Day Delivery</Subtitle>
-          <Content>Order before 7pm Monday to Thursday for delivery the next day</Content>
-        </Delivery>
+          <Large>
+            <Image
+              src={`${props.images.length > 0 &&
+                props.images[0].replace(
+                  'https:',
+                  ''
+                )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+              alt={props.title}
+            />
+          </Large>
+        </div>
+        <div className="col-xs-12 col-md-5 col-lg-6">
+          <Large>
+            <Title>
+              {props.title}
+            </Title>
+          </Large>
+          <MainInfo
+            multiCurrencyPrices={props.multiCurrencyPrices}
+            colors={props.colours}
+            sizes={props.sizes}
+            id={props.id}
+          />
+          <PropertiesButtons>
+            <div className="row">
+              <div className="col-xs-12 col-lg-6">
+                <ToLarge>
+                  <Button color="#171717" label="#ffffff">
+                    SELECT A SIZE
+                  </Button>
+                </ToLarge>
+                <Large>
+                  <Button color="#171717" label="#ffffff">
+                    ADD TO BAG
+                  </Button>
+                </Large>
+              </div>
+              <div className="col-xs-12 col-lg-6">
+                <Button color="transparent" label="#171717">
+                  FIND IN STORE
+                </Button>
+              </div>
+            </div>
+            <ToLarge>
+              <HelpButton type="button">NEED SIZE HELP?</HelpButton>
+            </ToLarge>
+          </PropertiesButtons>
+          <Delivery>
+            <Subtitle>Free Next Day Delivery</Subtitle>
+            <Content>
+              Order before 7pm Monday to Thursday for delivery the next day
+            </Content>
+          </Delivery>
+        </div>
       </div>
-    </div>
-  </Product>);
+    </StyledProduct>
+  );
+}
+
+Product.propTypes = {
+  title: PropTypes.string.isRequired,
+  colours: PropTypes.arrayOf(PropTypes.object).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  multiCurrencyPrices: PropTypes.objectOf(PropTypes.string).isRequired,
+  id: PropTypes.string.isRequired
+};

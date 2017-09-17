@@ -24,9 +24,9 @@ const Link = styled(NavLink)`
 export default function () {
   return (
     <nav>
-      <Link to="/womens-clothing">Women</Link>
-      <Link to="/mens-clothing">Men</Link>
-      <Link to="/children-clothing">Children</Link>
+      <Link to="/women">Women</Link>
+      <Link to="/men">Men</Link>
+      <Link to="/children">Children</Link>
       <Link to="/beaty">Beauty</Link>
       <Link to="/expierence">Experience</Link>
     </nav>

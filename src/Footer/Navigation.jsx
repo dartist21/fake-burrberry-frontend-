@@ -98,7 +98,7 @@ export default function () {
         <div className="col-md-3">
           <Large>
             <Image
-              src="http://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg"
+              src="//assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg"
               alt="shop"
             />
             <FindStoreLink to="">Find a store</FindStoreLink>

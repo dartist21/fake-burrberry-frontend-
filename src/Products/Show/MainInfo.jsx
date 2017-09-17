@@ -6,6 +6,7 @@ import { Large } from '../../Common/BreakPoints';
 import ColorBtn from './ColorBtn';
 import SizeBtn from './SizeBtn';
 import Size from './Size';
+import FormattedPrice from '../../Common/FormattedPrice';
 
 const Wrapper = styled.div`
   margin: 1rem 0 2rem 0;
@@ -101,39 +102,51 @@ export default class MainInfo extends Component {
     return (
       <Wrapper>
         <PriceAndNumberWrapper>
-          <Price>110 000 руб</Price>
-          <Id>Item 39428531</Id>
+          <Price>
+            {this.props.multiCurrencyPrices.RUB &&
+              <FormattedPrice
+                price={Number(this.props.multiCurrencyPrices.RUB) / 100}
+                currency="RUB"
+              />}
+          </Price>
+          <Id>
+            Item {this.props.id}
+          </Id>
         </PriceAndNumberWrapper>
         <div className="row">
           <div className="col-lg-6">
-            <Color>
-              Colour: <span>{this.props.colors[this.state.color].name}</span>
-            </Color>
+            {this.props.colors.length > 0 &&
+              <Color>
+                Colour: <span>{this.props.colors[this.state.color].value}</span>
+              </Color>}
             <ColorBtnWrapper>
-              {this.props.colors.map((color, index) =>
-                (<ColorBtn
-                  key={color.value}
-                  value={index}
-                  color={color.value}
-                  isActive={this.state.color === index}
-                  onClick={this.handleOptionChange}
-                />),
-              )}
+              {this.props.colors &&
+                this.props.colors.map((color, index) =>
+                  (<ColorBtn
+                    key={color.value}
+                    value={index}
+                    color={color.src}
+                    isActive={this.state.color === index}
+                    onClick={this.handleOptionChange}
+                  />),
+                )}
             </ColorBtnWrapper>
           </div>
           <div className="col-lg-6">
             <Large>
-              <Size sizes={this.props.sizes} selectedSize={this.state.size}>
-                {this.props.sizes.map((size, index) =>
-                  (<SizeBtn
-                    key={size}
-                    size={size}
-                    value={index}
-                    isActive={this.state.size === index}
-                    onClick={this.handleOptionChange}
-                  />),
-                )}
-              </Size>
+              {this.props.sizes.length > 0 &&
+                <Size sizes={this.props.sizes} selectedSize={this.state.size}>
+                  {this.props.sizes &&
+                    this.props.sizes.map((size, index) =>
+                      (<SizeBtn
+                        key={size.id}
+                        size={size.title}
+                        value={index}
+                        isActive={this.state.size === index}
+                        onClick={this.handleOptionChange}
+                      />),
+                    )}
+                </Size>}
             </Large>
           </div>
         </div>
@@ -144,5 +157,7 @@ export default class MainInfo extends Component {
 
 MainInfo.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.object).isRequired,
-  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  multiCurrencyPrices: PropTypes.objectOf(PropTypes.string).isRequired,
+  id: PropTypes.string.isRequired,
 };
