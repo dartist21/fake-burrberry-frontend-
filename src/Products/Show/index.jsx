@@ -82,7 +82,6 @@ export default class Show extends Component {
   }
 
   render() {
-    console.log(this.state.images.length > 0);
     return (
       <div>
         <Helmet>
