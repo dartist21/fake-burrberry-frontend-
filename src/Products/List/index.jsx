@@ -125,7 +125,10 @@ export default class List extends Component {
                     id={product.id}
                     to={`/${this.props.match.params.category}/${this.props.match.params
                       .section}/${product.slug}`}
-                    image={`${product.images[0]}?$BBY_V2_ML_3X4$&wid=300&hei=400`}
+                    image={`${product.images[0].replace(
+                      'https:',
+                      '',
+                    )}?$BBY_V2_ML_3X4$&wid=300&hei=400`}
                     title={product.title}
                     label={product.label}
                     colorsNumber={product.colours.length}

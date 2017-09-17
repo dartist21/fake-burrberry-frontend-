@@ -82,6 +82,7 @@ export default class Show extends Component {
   }
 
   render() {
+    console.log(this.state.images.length > 0);
     return (
       <div>
         <Helmet>
@@ -119,33 +120,41 @@ export default class Show extends Component {
               </ReadMoreAccordion>
             </div>
             <div className="col-lg-8">
-              <DescriptionImage
-                src={`${this.state.images[1]}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
-                alt={this.state.title}
-              />
+              {this.state.images.length > 0 &&
+                <DescriptionImage
+                  src={`${this.state.images[1].replace(
+                    'https:',
+                    '',
+                  )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+                  alt={this.state.title}
+                />}
             </div>
           </div>
-          <MorePhotos>
-            <div className="row">
-              <div className="col-lg-4">
-                <Image
-                  first
-                  src={`${this.state.images[2]}?$BBY_V2_ML_3X4$`}
-                  alt={this.state.title}
-                />
+          {this.state.images.length > 0 &&
+            <MorePhotos>
+              <div className="row">
+                <div className="col-lg-4">
+                  <Image
+                    first
+                    src={`${this.state.images[2].replace('https:', '')}?$BBY_V2_ML_3X4$`}
+                    alt={this.state.title}
+                  />
+                </div>
+                <div className="col-lg-4">
+                  <Image
+                    second
+                    src={`${this.state.images[3].replace('https:', '')}?$BBY_V2_ML_3X4$`}
+                    alt={this.state.title}
+                  />
+                </div>
+                <div className="col-lg-4">
+                  <Image
+                    src={`${this.state.images[4].replace('https:', '')}?$BBY_V2_ML_3X4$`}
+                    alt={this.state.title}
+                  />
+                </div>
               </div>
-              <div className="col-lg-4">
-                <Image
-                  second
-                  src={`${this.state.images[3]}?$BBY_V2_ML_3X4$`}
-                  alt={this.state.title}
-                />
-              </div>
-              <div className="col-lg-4">
-                <Image src={`${this.state.images[4]}?$BBY_V2_ML_3X4$`} alt={this.state.title} />
-              </div>
-            </div>
-          </MorePhotos>
+            </MorePhotos>}
           <ReadMoreAccordion title="SHIPPING & RETURNS" mobile />
           <Delivery />
           <Recomendations linkedProducts={this.state.linkedProducts} match={this.props.match} />

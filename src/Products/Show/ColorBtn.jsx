@@ -15,7 +15,7 @@ const ColorBtnStyled = styled.button`
   cursor: pointer;
 
   border: ${props => (props.isActive ? 'solid 1px #232122' : 'none')};
-  background-image: url(${props => props.color});
+  background-image: url(${props => `${props.color.replace('https:', '')}`});
 `;
 
 export default function ColorBtn(props) {
@@ -37,5 +37,5 @@ ColorBtn.propTypes = {
   value: PropTypes.number.isRequired,
   isActive: PropTypes.bool.isRequired,
   color: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired
 };

@@ -37,15 +37,43 @@ const Image = styled.img`
 export default function Gallery(props) {
   return (
     <StyledGallery>
-      <Image src={`${props.images[0]}?$BBY_V2_ML_3X4$&wid=600&hei=800`} alt={props.title} />
-      <Image src={`${props.images[1]}?$BBY_V2_ML_3X4$&wid=600&hei=800`} alt={props.title} />
-      <Image src={`${props.images[2]}?$BBY_V2_ML_3X4$&wid=600&hei=800`} alt={props.title} />
-      <Image src={`${props.images[3]}?$BBY_V2_ML_3X4$&wid=600&hei=800`} alt={props.title} />
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[0].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[1].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[2].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
+      {props.images.length > 0 &&
+        <Image
+          src={`${props.images[3].replace(
+            'https:',
+            ''
+          )}?$BBY_V2_ML_3X4$&wid=600&hei=800`}
+          alt={props.title}
+        />}
     </StyledGallery>
   );
 }
 
 Gallery.propTypes = {
   title: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired
 };

@@ -45,7 +45,10 @@ export default function Recomendations(props) {
           props.linkedProducts.map(linkedProduct =>
             (<div className="col-xs-6 col-md-3" key={linkedProduct.id}>
               <Card
-                image={`${linkedProduct.images[0]}?$BBY_V2_ML_3X4$&hei=720&wid=540`}
+                image={`${linkedProduct.images[0].replace(
+                  'https:',
+                  '',
+                )}?$BBY_V2_ML_3X4$&hei=720&wid=540`}
                 title={linkedProduct.title}
                 // label="Relaxed fit"
                 colorsNumber={linkedProduct.colours.length}
